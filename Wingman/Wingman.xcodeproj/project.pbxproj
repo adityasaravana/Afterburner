@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59450A53298B60D40086D2EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B9414C298A1F02005211DB /* Cocoa.framework */; };
+		59450A57298B60D40086D2EC /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450A56298B60D40086D2EC /* SourceEditorExtension.swift */; };
+		59450A59298B60D40086D2EC /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450A58298B60D40086D2EC /* SourceEditorCommand.swift */; };
+		59450A5E298B60D40086D2EC /* Wingman for Xcode.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 59450A52298B60D40086D2EC /* Wingman for Xcode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		59450A62298B60DE0086D2EC /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B9414E298A1F02005211DB /* XcodeKit.framework */; };
+		59450A63298B60DE0086D2EC /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59B9414E298A1F02005211DB /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		59450A6A298B61A40086D2EC /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450A69298B61A40086D2EC /* OpenAIConnector.swift */; };
+		59A0E842298ED90300B66D1B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0E841298ED90300B66D1B /* User.swift */; };
+		59A0E843298ED90300B66D1B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0E841298ED90300B66D1B /* User.swift */; };
+		59B94138298A1EC7005211DB /* WingmanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B94137298A1EC7005211DB /* WingmanApp.swift */; };
+		59B9413A298A1EC7005211DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B94139298A1EC7005211DB /* ContentView.swift */; };
+		59B9413C298A1EC8005211DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B9413B298A1EC8005211DB /* Assets.xcassets */; };
+		59B9413F298A1EC8005211DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B9413E298A1EC8005211DB /* Preview Assets.xcassets */; };
+		59FE4DF72997332A009421E4 /* GumroadConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE4DF62997332A009421E4 /* GumroadConnector.swift */; };
+		59FE4DF82997D8F3009421E4 /* GumroadConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE4DF62997332A009421E4 /* GumroadConnector.swift */; };
+		59FE4DFB2998000C009421E4 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450A69298B61A40086D2EC /* OpenAIConnector.swift */; };
+		59FE4DFD2998058E009421E4 /* InstallationInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE4DFC2998058E009421E4 /* InstallationInstructionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59450A5C298B60D40086D2EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59B9412C298A1EC7005211DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59450A51298B60D40086D2EC;
+			remoteInfo = "Wingman for Xcode";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		59450A64298B60DE0086D2EC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				59450A63298B60DE0086D2EC /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B9415D298A1F02005211DB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				59450A5E298B60D40086D2EC /* Wingman for Xcode.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		59450A52298B60D40086D2EC /* Wingman for Xcode.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Wingman for Xcode.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59450A56298B60D40086D2EC /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		59450A58298B60D40086D2EC /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		59450A5A298B60D40086D2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59450A5B298B60D40086D2EC /* Wingman_for_Xcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wingman_for_Xcode.entitlements; sourceTree = "<group>"; };
+		59450A69298B61A40086D2EC /* OpenAIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIConnector.swift; sourceTree = "<group>"; };
+		59A0E841298ED90300B66D1B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		59B94134298A1EC7005211DB /* Wingman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wingman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59B94137298A1EC7005211DB /* WingmanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingmanApp.swift; sourceTree = "<group>"; };
+		59B94139298A1EC7005211DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		59B9413B298A1EC8005211DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59B9413E298A1EC8005211DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		59B94140298A1EC8005211DB /* Wingman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wingman.entitlements; sourceTree = "<group>"; };
+		59B9414C298A1F02005211DB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		59B9414E298A1F02005211DB /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		59FE4DF62997332A009421E4 /* GumroadConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GumroadConnector.swift; sourceTree = "<group>"; };
+		59FE4DFC2998058E009421E4 /* InstallationInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationInstructionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59450A4F298B60D40086D2EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59450A53298B60D40086D2EC /* Cocoa.framework in Frameworks */,
+				59450A62298B60DE0086D2EC /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B94131298A1EC7005211DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59450A55298B60D40086D2EC /* Wingman for Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				59450A56298B60D40086D2EC /* SourceEditorExtension.swift */,
+				59450A58298B60D40086D2EC /* SourceEditorCommand.swift */,
+				59450A5A298B60D40086D2EC /* Info.plist */,
+				59450A5B298B60D40086D2EC /* Wingman_for_Xcode.entitlements */,
+			);
+			path = "Wingman for Xcode";
+			sourceTree = "<group>";
+		};
+		59450A68298B61180086D2EC /* API Connectors */ = {
+			isa = PBXGroup;
+			children = (
+				59450A69298B61A40086D2EC /* OpenAIConnector.swift */,
+				59FE4DF62997332A009421E4 /* GumroadConnector.swift */,
+			);
+			path = "API Connectors";
+			sourceTree = "<group>";
+		};
+		59A0E840298ED8D700B66D1B /* Shared Files */ = {
+			isa = PBXGroup;
+			children = (
+				59450A68298B61180086D2EC /* API Connectors */,
+				59A0E841298ED90300B66D1B /* User.swift */,
+			);
+			path = "Shared Files";
+			sourceTree = "<group>";
+		};
+		59B9412B298A1EC7005211DB = {
+			isa = PBXGroup;
+			children = (
+				59A0E840298ED8D700B66D1B /* Shared Files */,
+				59B94136298A1EC7005211DB /* Wingman */,
+				59450A55298B60D40086D2EC /* Wingman for Xcode */,
+				59B9414B298A1F02005211DB /* Frameworks */,
+				59B94135298A1EC7005211DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59B94135298A1EC7005211DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59B94134298A1EC7005211DB /* Wingman.app */,
+				59450A52298B60D40086D2EC /* Wingman for Xcode.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59B94136298A1EC7005211DB /* Wingman */ = {
+			isa = PBXGroup;
+			children = (
+				59B94137298A1EC7005211DB /* WingmanApp.swift */,
+				59B94139298A1EC7005211DB /* ContentView.swift */,
+				59FE4DFC2998058E009421E4 /* InstallationInstructionView.swift */,
+				59B9413B298A1EC8005211DB /* Assets.xcassets */,
+				59B94140298A1EC8005211DB /* Wingman.entitlements */,
+				59B9413D298A1EC8005211DB /* Preview Content */,
+			);
+			path = Wingman;
+			sourceTree = "<group>";
+		};
+		59B9413D298A1EC8005211DB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				59B9413E298A1EC8005211DB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		59B9414B298A1F02005211DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59B9414C298A1F02005211DB /* Cocoa.framework */,
+				59B9414E298A1F02005211DB /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59450A51298B60D40086D2EC /* Wingman for Xcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59450A5F298B60D40086D2EC /* Build configuration list for PBXNativeTarget "Wingman for Xcode" */;
+			buildPhases = (
+				59450A4E298B60D40086D2EC /* Sources */,
+				59450A4F298B60D40086D2EC /* Frameworks */,
+				59450A50298B60D40086D2EC /* Resources */,
+				59450A64298B60DE0086D2EC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wingman for Xcode";
+			packageProductDependencies = (
+			);
+			productName = "Wingman for Xcode";
+			productReference = 59450A52298B60D40086D2EC /* Wingman for Xcode.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+		59B94133298A1EC7005211DB /* Wingman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59B94143298A1EC8005211DB /* Build configuration list for PBXNativeTarget "Wingman" */;
+			buildPhases = (
+				59B94130298A1EC7005211DB /* Sources */,
+				59B94131298A1EC7005211DB /* Frameworks */,
+				59B94132298A1EC7005211DB /* Resources */,
+				59B9415D298A1F02005211DB /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59450A5D298B60D40086D2EC /* PBXTargetDependency */,
+			);
+			name = Wingman;
+			packageProductDependencies = (
+			);
+			productName = Wingman;
+			productReference = 59B94134298A1EC7005211DB /* Wingman.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59B9412C298A1EC7005211DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					59450A51298B60D40086D2EC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					59B94133298A1EC7005211DB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 59B9412F298A1EC7005211DB /* Build configuration list for PBXProject "Wingman" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59B9412B298A1EC7005211DB;
+			packageReferences = (
+				59450A65298B61090086D2EC /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				59465E5029908CB000B5B316 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
+			);
+			productRefGroup = 59B94135298A1EC7005211DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59B94133298A1EC7005211DB /* Wingman */,
+				59450A51298B60D40086D2EC /* Wingman for Xcode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59450A50298B60D40086D2EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B94132298A1EC7005211DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B9413F298A1EC8005211DB /* Preview Assets.xcassets in Resources */,
+				59B9413C298A1EC8005211DB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59450A4E298B60D40086D2EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FE4DF72997332A009421E4 /* GumroadConnector.swift in Sources */,
+				59450A6A298B61A40086D2EC /* OpenAIConnector.swift in Sources */,
+				59450A57298B60D40086D2EC /* SourceEditorExtension.swift in Sources */,
+				59450A59298B60D40086D2EC /* SourceEditorCommand.swift in Sources */,
+				59A0E843298ED90300B66D1B /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B94130298A1EC7005211DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A0E842298ED90300B66D1B /* User.swift in Sources */,
+				59FE4DFB2998000C009421E4 /* OpenAIConnector.swift in Sources */,
+				59B9413A298A1EC7005211DB /* ContentView.swift in Sources */,
+				59FE4DFD2998058E009421E4 /* InstallationInstructionView.swift in Sources */,
+				59B94138298A1EC7005211DB /* WingmanApp.swift in Sources */,
+				59FE4DF82997D8F3009421E4 /* GumroadConnector.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59450A5D298B60D40086D2EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59450A51298B60D40086D2EC /* Wingman for Xcode */;
+			targetProxy = 59450A5C298B60D40086D2EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		59450A60298B60D40086D2EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Wingman for Xcode/Wingman_for_Xcode.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E2RJE8M8Y3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wingman for Xcode/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wingman for Xcode";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devdude.Wingman.Wingman-for-Xcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		59450A61298B60D40086D2EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Wingman for Xcode/Wingman_for_Xcode.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E2RJE8M8Y3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wingman for Xcode/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wingman for Xcode";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devdude.Wingman.Wingman-for-Xcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		59B94141298A1EC8005211DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59B94142298A1EC8005211DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		59B94144298A1EC8005211DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Wingman/Wingman.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wingman/Preview Content\"";
+				DEVELOPMENT_TEAM = E2RJE8M8Y3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devdude.Wingman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		59B94145298A1EC8005211DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Wingman/Wingman.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wingman/Preview Content\"";
+				DEVELOPMENT_TEAM = E2RJE8M8Y3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devdude.Wingman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59450A5F298B60D40086D2EC /* Build configuration list for PBXNativeTarget "Wingman for Xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59450A60298B60D40086D2EC /* Debug */,
+				59450A61298B60D40086D2EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59B9412F298A1EC7005211DB /* Build configuration list for PBXProject "Wingman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B94141298A1EC8005211DB /* Debug */,
+				59B94142298A1EC8005211DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59B94143298A1EC8005211DB /* Build configuration list for PBXNativeTarget "Wingman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B94144298A1EC8005211DB /* Debug */,
+				59B94145298A1EC8005211DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		59450A65298B61090086D2EC /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		59465E5029908CB000B5B316 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = 59B9412C298A1EC7005211DB /* Project object */;
+}

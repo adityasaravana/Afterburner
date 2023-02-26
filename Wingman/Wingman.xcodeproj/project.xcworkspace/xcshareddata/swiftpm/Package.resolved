@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "openaiswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adamrushy/OpenAISwift.git",
+      "state" : {
+        "revision" : "ed0c6f2dacbac4b3f4028751ed10fcfbf71a8a1d",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "stripe-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stripe/stripe-ios-spm",
+      "state" : {
+        "revision" : "949130625189df7858888fc3b92d554570883d92",
+        "version" : "23.3.3"
+      }
+    }
+  ],
+  "version" : 2
+}
