@@ -14,12 +14,12 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         
-        let user = WingmanUser.sharedInstance
+        let user = User.sharedInstance
         
         let lines = invocation.buffer.lines
         let linesString = lines.componentsJoined(by: "")
         
-        if user.licenseLeyValid {
+        if user.apiKey != "" {
             let pasteboard = NSPasteboard.general
             pasteboard.clearContents()
             pasteboard.setString(linesString, forType: .string)
@@ -37,16 +37,11 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             lines.removeAllObjects()
             
             lines.addObjects(from: editedLines)
-            
-            
         } else {
             let editedLines = [
         """
-        /// It looks like you haven't entered a license key yet.
-        /// To add your license key, follow the guide here:
-        /// You can purchase a license key here: https://thedevdudedownloads.gumroad.com/l/wingman
-        
-        /// If this isn't your first time seeing this message, your license key is invalid.
+        /// Looks like you haven't entered your OpenAI API License Key yet.
+        /// Please follow the guide in the Wingman app to add your API key.
         """
             ] + lines
             

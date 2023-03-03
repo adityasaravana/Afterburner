@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,8 +20,6 @@
 		59B9413A298A1EC7005211DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B94139298A1EC7005211DB /* ContentView.swift */; };
 		59B9413C298A1EC8005211DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B9413B298A1EC8005211DB /* Assets.xcassets */; };
 		59B9413F298A1EC8005211DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B9413E298A1EC8005211DB /* Preview Assets.xcassets */; };
-		59FE4DF72997332A009421E4 /* GumroadConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE4DF62997332A009421E4 /* GumroadConnector.swift */; };
-		59FE4DF82997D8F3009421E4 /* GumroadConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE4DF62997332A009421E4 /* GumroadConnector.swift */; };
 		59FE4DFB2998000C009421E4 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450A69298B61A40086D2EC /* OpenAIConnector.swift */; };
 		59FE4DFD2998058E009421E4 /* InstallationInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE4DFC2998058E009421E4 /* InstallationInstructionView.swift */; };
 /* End PBXBuildFile section */
@@ -77,7 +75,6 @@
 		59B94140298A1EC8005211DB /* Wingman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wingman.entitlements; sourceTree = "<group>"; };
 		59B9414C298A1F02005211DB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		59B9414E298A1F02005211DB /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
-		59FE4DF62997332A009421E4 /* GumroadConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GumroadConnector.swift; sourceTree = "<group>"; };
 		59FE4DFC2998058E009421E4 /* InstallationInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationInstructionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				59450A69298B61A40086D2EC /* OpenAIConnector.swift */,
-				59FE4DF62997332A009421E4 /* GumroadConnector.swift */,
 			);
 			path = "API Connectors";
 			sourceTree = "<group>";
@@ -243,7 +239,7 @@
 				};
 			};
 			buildConfigurationList = 59B9412F298A1EC7005211DB /* Build configuration list for PBXProject "Wingman" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -252,8 +248,6 @@
 			);
 			mainGroup = 59B9412B298A1EC7005211DB;
 			packageReferences = (
-				59450A65298B61090086D2EC /* XCRemoteSwiftPackageReference "OpenAISwift" */,
-				59465E5029908CB000B5B316 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 			);
 			productRefGroup = 59B94135298A1EC7005211DB /* Products */;
 			projectDirPath = "";
@@ -289,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59FE4DF72997332A009421E4 /* GumroadConnector.swift in Sources */,
 				59450A6A298B61A40086D2EC /* OpenAIConnector.swift in Sources */,
 				59450A57298B60D40086D2EC /* SourceEditorExtension.swift in Sources */,
 				59450A59298B60D40086D2EC /* SourceEditorCommand.swift in Sources */,
@@ -306,7 +299,6 @@
 				59B9413A298A1EC7005211DB /* ContentView.swift in Sources */,
 				59FE4DFD2998058E009421E4 /* InstallationInstructionView.swift in Sources */,
 				59B94138298A1EC7005211DB /* WingmanApp.swift in Sources */,
-				59FE4DF82997D8F3009421E4 /* GumroadConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,11 +317,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Wingman for Xcode/Wingman_for_Xcode.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E2RJE8M8Y3;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wingman for Xcode/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Wingman for Xcode";
@@ -353,11 +346,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Wingman for Xcode/Wingman_for_Xcode.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E2RJE8M8Y3;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wingman for Xcode/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Wingman for Xcode";
@@ -497,6 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Wingman/Wingman.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -527,6 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Wingman/Wingman.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -581,25 +577,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		59450A65298B61090086D2EC /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		59465E5029908CB000B5B316 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 23.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 59B9412C298A1EC7005211DB /* Project object */;
 }

@@ -136,7 +136,7 @@ struct Choice: Codable {
 public class OpenAIConnector {
     let codexEditURL = URL(string: "https://api.openai.com/v1/engines/code-davinci-edit-001/completions")
     let textDavinciURL = URL(string: "https://api.openai.com/v1/engines/text-davinci-003/completions")
-    let openAIKey = "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"
+    let openAIKey = User.sharedInstance.apiKey
     
     private func executeRequest(request: URLRequest, withSessionConfig sessionConfig: URLSessionConfiguration?) -> Data? {
         let semaphore = DispatchSemaphore(value: 0)
