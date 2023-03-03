@@ -25,19 +25,38 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             pasteboard.setString(linesString, forType: .string)
             
             let response = OpenAIConnector().processDavinci(linesString)
+            
+            var editedLines = [
+        """
+        ///
+        """
+            ] + lines
+            
             if response == nil {
-                completionHandler(NSError())
+//                completionHandler(NSError())
+                editedLines = [
+            """
+            /// Looks like your OpenAI API License key is invalid.
+            """
+                ] + lines
+                
+                lines.removeAllObjects()
+                lines.addObjects(from: editedLines)
+                
+            } else {
+                editedLines = [
+            """
+            /// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
+            """
+                ] + response!.split(whereSeparator: \.isNewline)
             }
-            let editedLines = [
-        """
-        /// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
-        """
-            ] + response!.split(whereSeparator: \.isNewline)
+            
+            
             
             lines.removeAllObjects()
-            
             lines.addObjects(from: editedLines)
         } else {
+            
             let editedLines = [
         """
         /// Looks like you haven't entered your OpenAI API License Key yet.
@@ -47,6 +66,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             
             lines.removeAllObjects()
             lines.addObjects(from: editedLines)
+            
         }
         
         completionHandler(nil)

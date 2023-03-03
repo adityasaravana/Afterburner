@@ -1,5 +1,5 @@
-/// Looks like you haven't entered your OpenAI API License Key yet.
-/// Please follow the guide in the Wingman app to add your API key.
+/// Looks like your OpenAI API License key is invalid.
+
 //
 //  ContentView.swift
 //  WingmanTesting

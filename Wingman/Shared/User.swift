@@ -13,7 +13,7 @@ public final class User: Codable {
     
     private init() {}
     
-    var apiKey = ""
+    var apiKey = "sdfsdf"
 }
 
 
