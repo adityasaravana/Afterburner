@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590A9E7D29B19F0F0062A0DF /* AddAPIKeyCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A9E7C29B19F0F0062A0DF /* AddAPIKeyCommand.swift */; };
+		590A9E7F29B19F9F0062A0DF /* File.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 590A9E7E29B19F9F0062A0DF /* File.rtf */; };
 		594D34BB29B195370021ED55 /* WingmanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34BA29B195370021ED55 /* WingmanApp.swift */; };
 		594D34BD29B195370021ED55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34BC29B195370021ED55 /* ContentView.swift */; };
 		594D34BF29B195380021ED55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594D34BE29B195380021ED55 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		590A9E7C29B19F0F0062A0DF /* AddAPIKeyCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAPIKeyCommand.swift; sourceTree = "<group>"; };
+		590A9E7E29B19F9F0062A0DF /* File.rtf */ = {isa = PBXFileReference; explicitFileType = text; path = File.rtf; sourceTree = "<group>"; };
 		594D34B729B195370021ED55 /* Wingman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wingman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		594D34BA29B195370021ED55 /* WingmanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingmanApp.swift; sourceTree = "<group>"; };
 		594D34BC29B195370021ED55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 		594D34AE29B195370021ED55 = {
 			isa = PBXGroup;
 			children = (
+				590A9E7E29B19F9F0062A0DF /* File.rtf */,
 				594D34E429B195760021ED55 /* Shared */,
 				594D34B929B195370021ED55 /* Wingman */,
 				594D34D329B195550021ED55 /* XcodeExtension */,
@@ -153,6 +158,7 @@
 			children = (
 				594D34D429B195550021ED55 /* SourceEditorExtension.swift */,
 				594D34D629B195550021ED55 /* SourceEditorCommand.swift */,
+				590A9E7C29B19F0F0062A0DF /* AddAPIKeyCommand.swift */,
 				594D34D829B195550021ED55 /* Info.plist */,
 				594D34D929B195550021ED55 /* XcodeExtension.entitlements */,
 			);
@@ -260,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				590A9E7F29B19F9F0062A0DF /* File.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +291,7 @@
 			files = (
 				594D34D529B195550021ED55 /* SourceEditorExtension.swift in Sources */,
 				594D34D729B195550021ED55 /* SourceEditorCommand.swift in Sources */,
+				590A9E7D29B19F0F0062A0DF /* AddAPIKeyCommand.swift in Sources */,
 				594D34E729B1958E0021ED55 /* User.swift in Sources */,
 				594D34EA29B1962B0021ED55 /* OpenAIConnector.swift in Sources */,
 				594D34ED29B1964A0021ED55 /* OpenAIResponseHandler.swift in Sources */,

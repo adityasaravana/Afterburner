@@ -8,14 +8,26 @@
 		<dict>
 			<key>XCSourceEditorCommandDefinitions</key>
 			<array>
+                <!-- Radio Wingman Command -->
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Source Editor Command</string>
+					<string>Radio Wingman</string>
 				</dict>
+                
+                <!-- Add OpenAI API Key -->
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).AddAPIKeyCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>$(PRODUCT_BUNDLE_IDENTIFIER).AddAPIKeyCommand</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Add OpenAI API Key</string>
+                </dict>
+                
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>

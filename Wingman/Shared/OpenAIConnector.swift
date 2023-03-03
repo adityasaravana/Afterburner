@@ -8,8 +8,7 @@
 import Foundation
 
 public class OpenAIConnector {
-    let codexEditURL = URL(string: "https://api.openai.com/v1/engines/code-davinci-edit-001/completions")
-    let textDavinciURL = URL(string: "https://api.openai.com/v1/engines/text-davinci-003/completions")
+    let openAIURL = URL(string: "https://api.openai.com/v1/engines/text-davinci-003/completions")
     let openAIKey = User.sharedInstance.apiKey
     
     private func executeRequest(request: URLRequest, withSessionConfig sessionConfig: URLSessionConfiguration?) -> Data? {
@@ -43,7 +42,7 @@ public class OpenAIConnector {
 
     func processDavinci(_ prompt: String) -> Optional<String> {
         
-        var request = URLRequest(url: self.textDavinciURL!)
+        var request = URLRequest(url: self.openAIURL!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Bearer \(self.openAIKey)", forHTTPHeaderField: "Authorization")

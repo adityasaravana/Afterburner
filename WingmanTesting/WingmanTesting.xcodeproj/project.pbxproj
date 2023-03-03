@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5929B42129B196F800B0C444 /* WingmanTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B42029B196F800B0C444 /* WingmanTestingApp.swift */; };
-		5929B42329B196F800B0C444 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B42229B196F800B0C444 /* ContentView.swift */; };
+		5929B42329B196F800B0C444 /* SwiftUITestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B42229B196F800B0C444 /* SwiftUITestCode.swift */; };
 		5929B42529B196F900B0C444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5929B42429B196F900B0C444 /* Assets.xcassets */; };
 		5929B42829B196F900B0C444 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5929B42729B196F900B0C444 /* Preview Assets.xcassets */; };
 		5929B43229B196F900B0C444 /* WingmanTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B43129B196F900B0C444 /* WingmanTestingTests.swift */; };
 		5929B43C29B196F900B0C444 /* WingmanTestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B43B29B196F900B0C444 /* WingmanTestingUITests.swift */; };
 		5929B43E29B196F900B0C444 /* WingmanTestingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B43D29B196F900B0C444 /* WingmanTestingUITestsLaunchTests.swift */; };
+		595B34F229B1A05F00B9BE77 /* File.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 595B34F129B1A05F00B9BE77 /* File.rtf */; };
+		598E2CBD29B19E420031C9E2 /* JSONConfigTestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E2CBC29B19E420031C9E2 /* JSONConfigTestCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		5929B41D29B196F800B0C444 /* WingmanTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WingmanTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5929B42029B196F800B0C444 /* WingmanTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingmanTestingApp.swift; sourceTree = "<group>"; };
-		5929B42229B196F800B0C444 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5929B42229B196F800B0C444 /* SwiftUITestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestCode.swift; sourceTree = "<group>"; };
 		5929B42429B196F900B0C444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5929B42729B196F900B0C444 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5929B42D29B196F900B0C444 /* WingmanTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WingmanTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		5929B43729B196F900B0C444 /* WingmanTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WingmanTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5929B43B29B196F900B0C444 /* WingmanTestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingmanTestingUITests.swift; sourceTree = "<group>"; };
 		5929B43D29B196F900B0C444 /* WingmanTestingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingmanTestingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		595B34F129B1A05F00B9BE77 /* File.rtf */ = {isa = PBXFileReference; explicitFileType = text; path = File.rtf; sourceTree = "<group>"; };
+		598E2CBC29B19E420031C9E2 /* JSONConfigTestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConfigTestCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		5929B41429B196F800B0C444 = {
 			isa = PBXGroup;
 			children = (
+				595B34F129B1A05F00B9BE77 /* File.rtf */,
 				5929B41F29B196F800B0C444 /* WingmanTesting */,
 				5929B43029B196F900B0C444 /* WingmanTestingTests */,
 				5929B43A29B196F900B0C444 /* WingmanTestingUITests */,
@@ -95,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				5929B42029B196F800B0C444 /* WingmanTestingApp.swift */,
-				5929B42229B196F800B0C444 /* ContentView.swift */,
+				5929B42229B196F800B0C444 /* SwiftUITestCode.swift */,
+				598E2CBC29B19E420031C9E2 /* JSONConfigTestCode.swift */,
 				5929B42429B196F900B0C444 /* Assets.xcassets */,
 				5929B42629B196F900B0C444 /* Preview Content */,
 			);
@@ -233,6 +239,7 @@
 			files = (
 				5929B42829B196F900B0C444 /* Preview Assets.xcassets in Resources */,
 				5929B42529B196F900B0C444 /* Assets.xcassets in Resources */,
+				595B34F229B1A05F00B9BE77 /* File.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5929B42329B196F800B0C444 /* ContentView.swift in Sources */,
+				5929B42329B196F800B0C444 /* SwiftUITestCode.swift in Sources */,
 				5929B42129B196F800B0C444 /* WingmanTestingApp.swift in Sources */,
+				598E2CBD29B19E420031C9E2 /* JSONConfigTestCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
