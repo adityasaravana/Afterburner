@@ -16,7 +16,7 @@
 		594D34D029B195550021ED55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34CF29B195550021ED55 /* Cocoa.framework */; };
 		594D34D529B195550021ED55 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34D429B195550021ED55 /* SourceEditorExtension.swift */; };
 		594D34D729B195550021ED55 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34D629B195550021ED55 /* SourceEditorCommand.swift */; };
-		594D34DC29B195550021ED55 /* XcodeExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 594D34CD29B195550021ED55 /* XcodeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		594D34DC29B195550021ED55 /* Wingman For Xcode.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 594D34CD29B195550021ED55 /* Wingman For Xcode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		594D34E129B1955A0021ED55 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34D129B195550021ED55 /* XcodeKit.framework */; };
 		594D34E229B1955A0021ED55 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34D129B195550021ED55 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		594D34E629B1958E0021ED55 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34E529B1958E0021ED55 /* User.swift */; };
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				594D34DC29B195550021ED55 /* XcodeExtension.appex in Embed Foundation Extensions */,
+				594D34DC29B195550021ED55 /* Wingman For Xcode.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +71,7 @@
 		594D34BE29B195380021ED55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		594D34C129B195380021ED55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		594D34C329B195380021ED55 /* Wingman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wingman.entitlements; sourceTree = "<group>"; };
-		594D34CD29B195550021ED55 /* XcodeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XcodeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		594D34CD29B195550021ED55 /* Wingman For Xcode.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Wingman For Xcode.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594D34CF29B195550021ED55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		594D34D129B195550021ED55 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		594D34D429B195550021ED55 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				594D34B729B195370021ED55 /* Wingman.app */,
-				594D34CD29B195550021ED55 /* XcodeExtension.appex */,
+				594D34CD29B195550021ED55 /* Wingman For Xcode.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,9 +197,9 @@
 			productReference = 594D34B729B195370021ED55 /* Wingman.app */;
 			productType = "com.apple.product-type.application";
 		};
-		594D34CC29B195550021ED55 /* XcodeExtension */ = {
+		594D34CC29B195550021ED55 /* Wingman For Xcode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 594D34DD29B195550021ED55 /* Build configuration list for PBXNativeTarget "XcodeExtension" */;
+			buildConfigurationList = 594D34DD29B195550021ED55 /* Build configuration list for PBXNativeTarget "Wingman For Xcode" */;
 			buildPhases = (
 				594D34C929B195550021ED55 /* Sources */,
 				594D34CA29B195550021ED55 /* Frameworks */,
@@ -210,9 +210,9 @@
 			);
 			dependencies = (
 			);
-			name = XcodeExtension;
+			name = "Wingman For Xcode";
 			productName = XcodeExtension;
-			productReference = 594D34CD29B195550021ED55 /* XcodeExtension.appex */;
+			productReference = 594D34CD29B195550021ED55 /* Wingman For Xcode.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 			projectRoot = "";
 			targets = (
 				594D34B629B195370021ED55 /* Wingman */,
-				594D34CC29B195550021ED55 /* XcodeExtension */,
+				594D34CC29B195550021ED55 /* Wingman For Xcode */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 /* Begin PBXTargetDependency section */
 		594D34DB29B195550021ED55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 594D34CC29B195550021ED55 /* XcodeExtension */;
+			target = 594D34CC29B195550021ED55 /* Wingman For Xcode */;
 			targetProxy = 594D34DA29B195550021ED55 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -561,7 +561,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		594D34DD29B195550021ED55 /* Build configuration list for PBXNativeTarget "XcodeExtension" */ = {
+		594D34DD29B195550021ED55 /* Build configuration list for PBXNativeTarget "Wingman For Xcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				594D34DE29B195550021ED55 /* Debug */,

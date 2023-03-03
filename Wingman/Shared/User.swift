@@ -11,12 +11,16 @@ public final class User: Codable {
     private var jsonURL = URL(fileURLWithPath: "WingmanUser", relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("json")
     static var sharedInstance: User = User()
     
-    private init() {}
+    private init() {
+        loadJSON()
+    }
     
-    var apiKey = "sdfsdf"
+    var apiKey = "sdfsdf" {
+        didSet {
+            saveJSON()
+        }
+    }
 }
-
-
 
 public extension FileManager {
     static var documentsDirectoryURL: URL {
@@ -34,7 +38,7 @@ extension User {
         
         do {
             let data = try Data(contentsOf: jsonURL)
-            User.sharedInstance = try decoder.decode(User.self, from: data)
+            apiKey = try decoder.decode(String.self, from: data)
         } catch {
             print(error.localizedDescription)
         }
@@ -45,7 +49,7 @@ extension User {
         encoder.outputFormatting = .prettyPrinted
         
         do {
-            let data = try encoder.encode(User.sharedInstance)
+            let data = try encoder.encode(apiKey)
             try data.write(to: jsonURL, options: .atomicWrite)
         } catch {
             print(error.localizedDescription)

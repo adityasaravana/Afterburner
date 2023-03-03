@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
+import PDFKit
 
 struct ContentView: View {
+    @State var sheetShowing = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Image("fighterjet").opacity(0.5)
+            VStack {
+                Text("Thanks for Downloading.").font(.title)
+                Link("Add Your OpenAI API Key", destination: URL(string: "https://thedevdude.notion.site/Adding-Your-OpenAI-API-Key-8e1149e6bc754781bd207d6a0142c378")!)
+                Text("Help is available at aditya.saravana@icloud.com.")
+                
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
@@ -24,3 +29,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

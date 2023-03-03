@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Epic Firetruck's Aircraft _.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Epic Firetruck's Aircraft _ 1.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Epic Firetruck's Aircraft _ 2.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
