@@ -1,16 +1,22 @@
 /// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
-func encodeCodableFile(_ file: CodableFile) -> Data? {
-    let encoder = JSONEncoder()
-    return try? encoder.encode(file)
+import Foundation
+
+struct CodableStruct: Codable {
+    var string: String
+    var int: Int
 }
-func decodeCodableFile(_ data: Data) -> CodableFile? {
-    let decoder = JSONDecoder()
-    return try? decoder.decode(CodableFile.self, from: data)
+
+// Write code to encode and decode CodableStruct as a JSON file
+// Encoding
+let encoder = JSONEncoder()
+let codableStruct = CodableStruct(string: "Hello World", int: 42)
+if let encoded = try? encoder.encode(codableStruct) {
+    // write encoded data to file
+    try encoded.write(to: URL(fileURLWithPath: "codableStruct.json"))
 }
-// Test code
-let codableFile = CodableFile()
-if let data = encodeCodableFile(codableFile) {
-    if let decodedFile = decodeCodableFile(data) {
-        assert(codableFile == decodedFile, "Decoded file is not equal to original file")
-    }
+// Decoding
+let decoder = JSONDecoder()
+if let data = try? Data(contentsOf: URL(fileURLWithPath: "codableStruct.json")), let decoded = try? decoder.decode(CodableStruct.self, from: data) {
+    print(decoded.string)
+    print(decoded.int)
 }

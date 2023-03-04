@@ -1,5 +1,11 @@
-/// Looks like your OpenAI API License key is invalid.
 /// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
+// create default SwiftUI template code
+import SwiftUI
+struct ContentView: View {
+    var body: some View {
+        Text("Hello, World!")
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

@@ -17,6 +17,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         let user = User.sharedInstance
         
         let lines = invocation.buffer.lines
+        let orignialLines = lines
         let linesString = lines.componentsJoined(by: "")
         
         if user.apiKey != "" {
@@ -39,16 +40,12 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             /// Looks like your OpenAI API License key is invalid.
             """
                 ] + lines
-                
-                lines.removeAllObjects()
-                lines.addObjects(from: editedLines)
-                
             } else {
                 editedLines = [
             """
             /// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
             """
-                ] + response!.split(whereSeparator: \.isNewline)
+                ] + orignialLines + response!.split(whereSeparator: \.isNewline)
             }
             
             
@@ -60,7 +57,9 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             let editedLines = [
         """
         /// Looks like you haven't entered your OpenAI API License Key yet.
-        /// Please follow the guide in the Wingman app to add your API key.
+        /// Please follow the guide at
+        /// https://thedevdude.notion.site/Adding-Your-OpenAI-API-Key-8e1149e6bc754781bd207d6a0142c378
+        /// to add your API key.
         """
             ] + lines
             

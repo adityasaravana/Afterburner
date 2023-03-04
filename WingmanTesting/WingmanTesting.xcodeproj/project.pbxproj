@@ -14,6 +14,7 @@
 		5929B43229B196F900B0C444 /* WingmanTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B43129B196F900B0C444 /* WingmanTestingTests.swift */; };
 		5929B43C29B196F900B0C444 /* WingmanTestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B43B29B196F900B0C444 /* WingmanTestingUITests.swift */; };
 		5929B43E29B196F900B0C444 /* WingmanTestingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B43D29B196F900B0C444 /* WingmanTestingUITestsLaunchTests.swift */; };
+		5976DFF329B3074500F86CC6 /* SwiftUITestCode2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976DFF229B3074500F86CC6 /* SwiftUITestCode2.swift */; };
 		598E2CBD29B19E420031C9E2 /* JSONConfigTestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E2CBC29B19E420031C9E2 /* JSONConfigTestCode.swift */; };
 		59BC9E7C29B234D200765DE7 /* File.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 59BC9E7B29B234D200765DE7 /* File.rtf */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		5929B43729B196F900B0C444 /* WingmanTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WingmanTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5929B43B29B196F900B0C444 /* WingmanTestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingmanTestingUITests.swift; sourceTree = "<group>"; };
 		5929B43D29B196F900B0C444 /* WingmanTestingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingmanTestingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5976DFF229B3074500F86CC6 /* SwiftUITestCode2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestCode2.swift; sourceTree = "<group>"; };
 		598E2CBC29B19E420031C9E2 /* JSONConfigTestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConfigTestCode.swift; sourceTree = "<group>"; };
 		59BC9E7B29B234D200765DE7 /* File.rtf */ = {isa = PBXFileReference; explicitFileType = text; path = File.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 				598E2CBC29B19E420031C9E2 /* JSONConfigTestCode.swift */,
 				5929B42429B196F900B0C444 /* Assets.xcassets */,
 				5929B42629B196F900B0C444 /* Preview Content */,
+				5976DFF229B3074500F86CC6 /* SwiftUITestCode2.swift */,
 			);
 			path = WingmanTesting;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5929B42329B196F800B0C444 /* SwiftUITestCode.swift in Sources */,
+				5976DFF329B3074500F86CC6 /* SwiftUITestCode2.swift in Sources */,
 				5929B42129B196F800B0C444 /* WingmanTestingApp.swift in Sources */,
 				598E2CBD29B19E420031C9E2 /* JSONConfigTestCode.swift in Sources */,
 			);
