@@ -53,7 +53,7 @@ public class OpenAIConnector {
             \(prompt)
             """,
             "temperature" : 0.7,
-            "max_tokens" : 180
+            "max_tokens" : 720
         ]
         
         var httpBodyJson: Data
