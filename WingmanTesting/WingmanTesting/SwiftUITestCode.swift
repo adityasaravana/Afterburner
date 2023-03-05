@@ -1,4 +1,3 @@
-/// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
 //
 //  SwiftUITestCode.swift
 //  WingmanTesting
