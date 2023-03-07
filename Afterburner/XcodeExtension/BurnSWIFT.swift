@@ -14,16 +14,16 @@ class BurnSWIFT: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         
-        let user = User.sharedInstance
+        
         
         print("---------------")
-        print(user.data.apiKey)
+        print(UserDefaults(suiteName:"com.devdude.afterburner.userData")!.string(forKey: "OPENAIKEY"))
         
         let lines = invocation.buffer.lines
         let orignialLines = lines
         let linesString = lines.componentsJoined(by: "")
         
-        if user.data.apiKey != "" {
+        if UserDefaults(suiteName:"com.devdude.afterburner.userData")!.string(forKey: "OPENAIKEY") != "" {
             let pasteboard = NSPasteboard.general
             pasteboard.clearContents()
             pasteboard.setString(linesString, forType: .string)

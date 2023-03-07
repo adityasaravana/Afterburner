@@ -14,13 +14,16 @@ class BurnOBJECTIVEC: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         
-        let user = User.sharedInstance
+        
+        
+        print("---------------")
+        print(UserDefaults(suiteName:"com.devdude.afterburner.userData")!.string(forKey: "OPENAIKEY"))
         
         let lines = invocation.buffer.lines
         let orignialLines = lines
         let linesString = lines.componentsJoined(by: "")
         
-        if user.data.apiKey != "" {
+        if UserDefaults(suiteName:"com.devdude.afterburner.userData")!.string(forKey: "OPENAIKEY") != "" {
             let pasteboard = NSPasteboard.general
             pasteboard.clearContents()
             pasteboard.setString(linesString, forType: .string)
@@ -55,10 +58,10 @@ class BurnOBJECTIVEC: NSObject, XCSourceEditorCommand {
         } else {
             
             let editedLines = [
-                """
-                // Looks like you haven't entered your OpenAI API License Key yet.
-                // You can enter it in the Afterburner app.
-                """
+        """
+        // Looks like you haven't entered your OpenAI API License Key yet.
+        // You can enter it in the Afterburner app.
+        """
             ] + lines
             
             lines.removeAllObjects()

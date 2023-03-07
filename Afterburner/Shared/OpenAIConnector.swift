@@ -18,6 +18,13 @@ public class OpenAIConnector {
     
     // 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
     
+    init() {
+        if ((UserDefaults(suiteName: "com.devdude.afterburner.userData")) == nil) {
+            UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set("", forKey: "OPENAIKEY")
+            UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set("", forKey: "MAXTOKENS")
+        }
+    }
+    
     func burn_swift(_ prompt: String) -> Optional<String> {
         return processDavinci(prompt, language: .swift)
     }
