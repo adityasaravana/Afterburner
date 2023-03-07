@@ -22,6 +22,7 @@ struct ContentView: View {
             Image("fighterjet").opacity(0.7)
             
             VStack {
+                Text("Debug Text Loader \(UserDefaults(suiteName:"com.devdude.afterburner.userData")!.string(forKey: "OPENAIKEY")!)")
                 Text("Thanks for Downloading.").bold().font(.title).padding([.leading, .bottom, .trailing])
                 Text("Editor -> Afterburner For Xcode -> Activate Afterburner")
 //                Link("Add Your OpenAI API Key", destination: URL(string: "https://thedevdude.notion.site/Adding-Your-OpenAI-API-Key-8e1149e6bc754781bd207d6a0142c378")!)
