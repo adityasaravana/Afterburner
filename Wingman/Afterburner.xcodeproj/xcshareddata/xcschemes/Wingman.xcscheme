@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "594D34B629B195370021ED55"
-               BuildableName = "Wingman.app"
-               BlueprintName = "Wingman"
-               ReferencedContainer = "container:Wingman.xcodeproj">
+               BuildableName = "Afterburner.app"
+               BlueprintName = "Afterburner"
+               ReferencedContainer = "container:Afterburner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "594D34B629B195370021ED55"
-            BuildableName = "Wingman.app"
-            BlueprintName = "Wingman"
-            ReferencedContainer = "container:Wingman.xcodeproj">
+            BuildableName = "Afterburner.app"
+            BlueprintName = "Afterburner"
+            ReferencedContainer = "container:Afterburner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "594D34B629B195370021ED55"
-            BuildableName = "Wingman.app"
-            BlueprintName = "Wingman"
-            ReferencedContainer = "container:Wingman.xcodeproj">
+            BuildableName = "Afterburner.app"
+            BlueprintName = "Afterburner"
+            ReferencedContainer = "container:Afterburner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

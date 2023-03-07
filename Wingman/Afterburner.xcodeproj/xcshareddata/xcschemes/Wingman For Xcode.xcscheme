@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "594D34CC29B195550021ED55"
-               BuildableName = "Wingman For Xcode.appex"
-               BlueprintName = "Wingman For Xcode"
-               ReferencedContainer = "container:Wingman.xcodeproj">
+               BuildableName = "Afterburner For Xcode.appex"
+               BlueprintName = "Afterburner For Xcode"
+               ReferencedContainer = "container:Afterburner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "594D34B629B195370021ED55"
-               BuildableName = "Wingman.app"
-               BlueprintName = "Wingman"
-               ReferencedContainer = "container:Wingman.xcodeproj">
+               BuildableName = "Afterburner.app"
+               BlueprintName = "Afterburner"
+               ReferencedContainer = "container:Afterburner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "594D34B629B195370021ED55"
-            BuildableName = "Wingman.app"
-            BlueprintName = "Wingman"
-            ReferencedContainer = "container:Wingman.xcodeproj">
+            BuildableName = "Afterburner.app"
+            BlueprintName = "Afterburner"
+            ReferencedContainer = "container:Afterburner.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "594D34B629B195370021ED55"
-            BuildableName = "Wingman.app"
-            BlueprintName = "Wingman"
-            ReferencedContainer = "container:Wingman.xcodeproj">
+            BuildableName = "Afterburner.app"
+            BlueprintName = "Afterburner"
+            ReferencedContainer = "container:Afterburner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

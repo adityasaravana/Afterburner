@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct WingmanApp: App {
+struct AfterburnerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
