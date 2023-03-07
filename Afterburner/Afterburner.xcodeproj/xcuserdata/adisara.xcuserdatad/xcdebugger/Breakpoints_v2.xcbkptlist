@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E535F163-A3C6-4446-A666-70B3DDFF8EF7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "066B59EC-B9FD-4154-A669-8D598B06E0A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XcodeExtension/BurnSWIFT.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "perform(with:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "905D1E1C-619E-4F93-9AC2-01781CE5140C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XcodeExtension/BurnSWIFT.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "perform(with:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C89A556D-9D1E-4448-9D10-A40799DA5DAA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/OpenAIConnector.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "OpenAIConnector"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A592B10-ED69-4AC1-9858-CC39D4F222F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/OpenAIConnector.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "3A592B10-ED69-4AC1-9858-CC39D4F222F5 - 7086c2c8a8f5b78e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Afterburner.OpenAIConnector.deinit"
+                  moduleName = "Afterburner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adisara/Documents/GitHub/Afterburner/Afterburner/Shared/OpenAIConnector.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "3A592B10-ED69-4AC1-9858-CC39D4F222F5 - c284220caecffcbe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Afterburner.OpenAIConnector.__deallocating_deinit"
+                  moduleName = "Afterburner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adisara/Documents/GitHub/Afterburner/Afterburner/Shared/OpenAIConnector.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "3A592B10-ED69-4AC1-9858-CC39D4F222F5 - 4f4ac77ba6c750ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Afterburner.OpenAIConnector.__allocating_init() -&gt; Afterburner.OpenAIConnector"
+                  moduleName = "Afterburner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adisara/Documents/GitHub/Afterburner/Afterburner/Shared/OpenAIConnector.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "3A592B10-ED69-4AC1-9858-CC39D4F222F5 - 1df2b3cc147865e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Afterburner.OpenAIConnector.init() -&gt; Afterburner.OpenAIConnector"
+                  moduleName = "Afterburner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adisara/Documents/GitHub/Afterburner/Afterburner/Shared/OpenAIConnector.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

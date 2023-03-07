@@ -16,6 +16,9 @@ class BurnSWIFT: NSObject, XCSourceEditorCommand {
         
         let user = User.sharedInstance
         
+        print("---------------")
+        print(user.data.apiKey)
+        
         let lines = invocation.buffer.lines
         let orignialLines = lines
         let linesString = lines.componentsJoined(by: "")

@@ -10,8 +10,6 @@ import PDFKit
 
 struct ContentView: View {
     @State var sheetShowing = false
-    let user = User.sharedInstance
-    
     @State var apiKeyLocal = ""
     @State var maxTokenCountLocal = 720
     
@@ -38,8 +36,10 @@ struct ContentView: View {
                 }
                 
                 Button("Update Settings") {
-                    user.data.apiKey = apiKeyLocal
-                    user.data.maxTokens = maxTokenCountLocal
+                    UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set(apiKeyLocal, forKey: "OPENAIKEY")
+                    UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set(maxTokenCountLocal, forKey: "MAXTOKENS")
+                    
+                    print("updated")
                 }
                 
                 Divider()

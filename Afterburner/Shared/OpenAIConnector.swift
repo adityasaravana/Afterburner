@@ -14,7 +14,9 @@ public enum AfterburnerLanguage {
 
 public class OpenAIConnector {
     let openAIURL = URL(string: "https://api.openai.com/v1/engines/text-davinci-003/completions")
-    let openAIKey = User.sharedInstance.data.apiKey
+    let openAIKey = UserDefaults(suiteName: "com.devdude.afterburner.userData")!.string(forKey: "OPENAIKEY")
+    
+    // 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
     
     func burn_swift(_ prompt: String) -> Optional<String> {
         return processDavinci(prompt, language: .swift)

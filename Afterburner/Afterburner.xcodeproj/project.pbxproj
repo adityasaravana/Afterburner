@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		590A9E7D29B19F0F0062A0DF /* AddAPIKeyCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A9E7C29B19F0F0062A0DF /* AddAPIKeyCommand.swift */; };
-		590A9E7F29B19F9F0062A0DF /* File.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 590A9E7E29B19F9F0062A0DF /* File.rtf */; };
 		591C345F29B6DADB00EAA454 /* OpenAIConnector_Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C345E29B6DADB00EAA454 /* OpenAIConnector_Guts.swift */; };
 		591C346029B6DADB00EAA454 /* OpenAIConnector_Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C345E29B6DADB00EAA454 /* OpenAIConnector_Guts.swift */; };
 		591C346329B6DC0E00EAA454 /* BurnOBJECTIVEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C346129B6DC0E00EAA454 /* BurnOBJECTIVEC.swift */; };
@@ -22,8 +21,6 @@
 		594D34DC29B195550021ED55 /* Afterburner For Xcode.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 594D34CD29B195550021ED55 /* Afterburner For Xcode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		594D34E129B1955A0021ED55 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34D129B195550021ED55 /* XcodeKit.framework */; };
 		594D34E229B1955A0021ED55 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34D129B195550021ED55 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		594D34E629B1958E0021ED55 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34E529B1958E0021ED55 /* User.swift */; };
-		594D34E729B1958E0021ED55 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34E529B1958E0021ED55 /* User.swift */; };
 		594D34E929B1962B0021ED55 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34E829B1962B0021ED55 /* OpenAIConnector.swift */; };
 		594D34EA29B1962B0021ED55 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34E829B1962B0021ED55 /* OpenAIConnector.swift */; };
 		594D34EC29B1964A0021ED55 /* OpenAIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34EB29B1964A0021ED55 /* OpenAIResponseHandler.swift */; };
@@ -67,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		590A9E7C29B19F0F0062A0DF /* AddAPIKeyCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAPIKeyCommand.swift; sourceTree = "<group>"; };
-		590A9E7E29B19F9F0062A0DF /* File.rtf */ = {isa = PBXFileReference; explicitFileType = text; path = File.rtf; sourceTree = "<group>"; };
 		591C345E29B6DADB00EAA454 /* OpenAIConnector_Guts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIConnector_Guts.swift; sourceTree = "<group>"; };
 		591C346129B6DC0E00EAA454 /* BurnOBJECTIVEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnOBJECTIVEC.swift; sourceTree = "<group>"; };
 		594D34B729B195370021ED55 /* Afterburner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Afterburner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +79,6 @@
 		594D34D629B195550021ED55 /* BurnSWIFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnSWIFT.swift; sourceTree = "<group>"; };
 		594D34D829B195550021ED55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		594D34D929B195550021ED55 /* XcodeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeExtension.entitlements; sourceTree = "<group>"; };
-		594D34E529B1958E0021ED55 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		594D34E829B1962B0021ED55 /* OpenAIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIConnector.swift; sourceTree = "<group>"; };
 		594D34EB29B1964A0021ED55 /* OpenAIResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIResponseHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +106,6 @@
 		594D34AE29B195370021ED55 = {
 			isa = PBXGroup;
 			children = (
-				590A9E7E29B19F9F0062A0DF /* File.rtf */,
 				594D34E429B195760021ED55 /* Shared */,
 				594D34B929B195370021ED55 /* Afterburner */,
 				594D34D329B195550021ED55 /* XcodeExtension */,
@@ -174,7 +168,6 @@
 		594D34E429B195760021ED55 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				594D34E529B1958E0021ED55 /* User.swift */,
 				594D34E829B1962B0021ED55 /* OpenAIConnector.swift */,
 				591C345E29B6DADB00EAA454 /* OpenAIConnector_Guts.swift */,
 				594D34EB29B1964A0021ED55 /* OpenAIResponseHandler.swift */,
@@ -273,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				590A9E7F29B19F9F0062A0DF /* File.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +279,6 @@
 				591C345F29B6DADB00EAA454 /* OpenAIConnector_Guts.swift in Sources */,
 				594D34BD29B195370021ED55 /* ContentView.swift in Sources */,
 				594D34BB29B195370021ED55 /* AfterburnerApp.swift in Sources */,
-				594D34E629B1958E0021ED55 /* User.swift in Sources */,
 				594D34E929B1962B0021ED55 /* OpenAIConnector.swift in Sources */,
 				594D34EC29B1964A0021ED55 /* OpenAIResponseHandler.swift in Sources */,
 			);
@@ -302,7 +293,6 @@
 				590A9E7D29B19F0F0062A0DF /* AddAPIKeyCommand.swift in Sources */,
 				591C346029B6DADB00EAA454 /* OpenAIConnector_Guts.swift in Sources */,
 				591C346329B6DC0E00EAA454 /* BurnOBJECTIVEC.swift in Sources */,
-				594D34E729B1958E0021ED55 /* User.swift in Sources */,
 				594D34EA29B1962B0021ED55 /* OpenAIConnector.swift in Sources */,
 				594D34ED29B1964A0021ED55 /* OpenAIResponseHandler.swift in Sources */,
 			);
