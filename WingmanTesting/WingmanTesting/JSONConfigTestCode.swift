@@ -1,4 +1,6 @@
 /// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
+/// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
+/// ORIGINAL CODE HAS BEEN COPIED TO CLIPBOARD
 //
 //  JSONConfigTestCode.swift
 //  WingmanTesting
@@ -13,7 +15,26 @@ struct CodableStruct {
     var int: Int
 }
 
+public extension FileManager {
+    static var documentsDirectoryURL: URL {
+        return `default`.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+}
+
 extension CodableStruct: Codable {
-    // Write functions to encode and decode CodableStruct as a JSON file.
+    func encode() throws {
+        let encoder = JSONEncoder()
+        let data = try encoder.encode(self)
+        
+        let filePath = FileManager.documentsDirectoryURL.appendingPathComponent("data.json")
+        
+        try data.write(to: filePath)
+    }
     
+    static func decode() throws -> CodableStruct? {
+        let filePath = FileManager.documentsDirectoryURL.appendingPathComponent("data.json")
+        let data = try Data(contentsOf: filePath)
+        let decoder = JSONDecoder()
+        return try decoder.decode(CodableStruct.self, from: data)
+    }
 }
