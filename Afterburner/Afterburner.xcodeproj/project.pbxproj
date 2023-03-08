@@ -175,8 +175,8 @@
 		594D34E429B195760021ED55 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */,
 				5986C8E929B8C74A00AD8829 /* DataManager.swift */,
+				5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */,
 				5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */,
 				5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */,
 			);
