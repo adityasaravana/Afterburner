@@ -20,13 +20,15 @@
 		594D34E129B1955A0021ED55 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34D129B195550021ED55 /* XcodeKit.framework */; };
 		594D34E229B1955A0021ED55 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34D129B195550021ED55 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5986C8EB29B8C74B00AD8829 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */; };
-		5986C8EC29B8C74B00AD8829 /* EnclaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E929B8C74A00AD8829 /* EnclaveManager.swift */; };
+		5986C8EC29B8C74B00AD8829 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E929B8C74A00AD8829 /* DataManager.swift */; };
 		5986C8ED29B8C74B00AD8829 /* OpenAIConnector_Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */; };
 		5986C8EF29B8C75400AD8829 /* OpenAIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */; };
 		5986C8F029B8C78300AD8829 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */; };
 		5986C8F129B8C78500AD8829 /* OpenAIConnector_Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */; };
 		5986C8F229B8C78800AD8829 /* OpenAIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */; };
-		5986C8F329B8C78B00AD8829 /* EnclaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E929B8C74A00AD8829 /* EnclaveManager.swift */; };
+		5986C8F329B8C78B00AD8829 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E929B8C74A00AD8829 /* DataManager.swift */; };
+		5986C8F629B8C8DB00AD8829 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 5986C8F529B8C8DB00AD8829 /* Valet */; };
+		5986C8F829B8CA0900AD8829 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 5986C8F729B8CA0900AD8829 /* Valet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,7 @@
 		594D34D829B195550021ED55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		594D34D929B195550021ED55 /* XcodeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeExtension.entitlements; sourceTree = "<group>"; };
 		5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIConnector.swift; sourceTree = "<group>"; };
-		5986C8E929B8C74A00AD8829 /* EnclaveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnclaveManager.swift; sourceTree = "<group>"; };
+		5986C8E929B8C74A00AD8829 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIConnector_Guts.swift; sourceTree = "<group>"; };
 		5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIResponseHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5986C8F629B8C8DB00AD8829 /* Valet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5986C8F829B8CA0900AD8829 /* Valet in Frameworks */,
 				594D34D029B195550021ED55 /* Cocoa.framework in Frameworks */,
 				594D34E129B1955A0021ED55 /* XcodeKit.framework in Frameworks */,
 			);
@@ -172,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */,
-				5986C8E929B8C74A00AD8829 /* EnclaveManager.swift */,
+				5986C8E929B8C74A00AD8829 /* DataManager.swift */,
 				5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */,
 				5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */,
 			);
@@ -197,6 +201,9 @@
 				594D34DB29B195550021ED55 /* PBXTargetDependency */,
 			);
 			name = Afterburner;
+			packageProductDependencies = (
+				5986C8F529B8C8DB00AD8829 /* Valet */,
+			);
 			productName = Wingman;
 			productReference = 594D34B729B195370021ED55 /* Afterburner.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +222,9 @@
 			dependencies = (
 			);
 			name = "Afterburner For Xcode";
+			packageProductDependencies = (
+				5986C8F729B8CA0900AD8829 /* Valet */,
+			);
 			productName = XcodeExtension;
 			productReference = 594D34CD29B195550021ED55 /* Afterburner For Xcode.appex */;
 			productType = "com.apple.product-type.xcode-extension";
@@ -246,6 +256,9 @@
 				Base,
 			);
 			mainGroup = 594D34AE29B195370021ED55;
+			packageReferences = (
+				5986C8F429B8C8DB00AD8829 /* XCRemoteSwiftPackageReference "Valet" */,
+			);
 			productRefGroup = 594D34B829B195370021ED55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5986C8ED29B8C74B00AD8829 /* OpenAIConnector_Guts.swift in Sources */,
-				5986C8EC29B8C74B00AD8829 /* EnclaveManager.swift in Sources */,
+				5986C8EC29B8C74B00AD8829 /* DataManager.swift in Sources */,
 				594D34BD29B195370021ED55 /* ContentView.swift in Sources */,
 				5986C8EF29B8C75400AD8829 /* OpenAIResponseHandler.swift in Sources */,
 				594D34BB29B195370021ED55 /* AfterburnerApp.swift in Sources */,
@@ -293,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5986C8F329B8C78B00AD8829 /* EnclaveManager.swift in Sources */,
+				5986C8F329B8C78B00AD8829 /* DataManager.swift in Sources */,
 				5986C8F129B8C78500AD8829 /* OpenAIConnector_Guts.swift in Sources */,
 				594D34D529B195550021ED55 /* SourceEditorExtension.swift in Sources */,
 				5986C8F029B8C78300AD8829 /* OpenAIConnector.swift in Sources */,
@@ -579,6 +592,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5986C8F429B8C8DB00AD8829 /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Square/Valet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5986C8F529B8C8DB00AD8829 /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5986C8F429B8C8DB00AD8829 /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+		5986C8F729B8CA0900AD8829 /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5986C8F429B8C8DB00AD8829 /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 594D34AF29B195370021ED55 /* Project object */;
 }
