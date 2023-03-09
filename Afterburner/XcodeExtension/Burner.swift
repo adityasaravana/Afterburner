@@ -22,7 +22,7 @@ public struct Burner {
         let orignialLines = lines
         let linesString = lines.componentsJoined(by: "")
         
-        if sharedData.readValue("OPENAIKEY") != nil && sharedData.readValue("OPENAIKEY") != "" {
+        if sharedData.readValue("OPENAIKEY") != "" {
             let pasteboard = NSPasteboard.general
             pasteboard.clearContents()
             pasteboard.setString(linesString, forType: .string)
