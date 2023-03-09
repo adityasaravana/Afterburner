@@ -60,7 +60,7 @@ extension OpenAIConnector {
             \(prompt)
             """,
             "temperature" : 0.7,
-            "max_tokens" : UserDefaults(suiteName:"com.devdude.afterburner.userData")!.integer(forKey: "MAXTOKENS")
+            "max_tokens" : Int(DataManager().readValue("MAXTOKENS") ?? "720") ?? 720
         ]
         
         var httpBodyJson: Data

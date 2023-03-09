@@ -37,8 +37,11 @@ struct ContentView: View {
                 }
                 
                 Button("Update Settings") {
-                    UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set(apiKeyLocal, forKey: "OPENAIKEY")
-                    UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set(maxTokenCountLocal, forKey: "MAXTOKENS")
+//                    UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set(apiKeyLocal, forKey: "OPENAIKEY")
+//                    UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set(maxTokenCountLocal, forKey: "MAXTOKENS")
+                    
+                    DataManager().writeValue(apiKeyLocal, key: "OPENAIKEY")
+                    DataManager().writeValue(String(maxTokenCountLocal), key: "MAXTOKENS")
                     
                     print("updated")
                 }
