@@ -14,14 +14,17 @@ public enum AfterburnerLanguage {
 
 public class OpenAIConnector {
     let openAIURL = URL(string: "https://api.openai.com/v1/engines/text-davinci-003/completions")
-    let openAIKey = DataManager().readValue("OPENAIKEY")
+    var openAIKey = DataManager().readValue("OPENAIKEY")
     
     // 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
     
     init() {
-        if ((DataManager().readValue("OPENAIKEY")) == nil) {
-            UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set("", forKey: "OPENAIKEY")
-            UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set("", forKey: "MAXTOKENS")
+        if openAIKey == nil {
+            let manager = DataManager()
+            manager.writeValue("", key: "OPENAIKEY")
+            manager.writeValue("", key: "MAXTOKENS")
+            
+            openAIKey = DataManager().readValue("OPENAIKEY")!
         }
     }
     

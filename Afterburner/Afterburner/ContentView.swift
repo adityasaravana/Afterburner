@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import PDFKit
 
 struct ContentView: View {
     @State var sheetShowing = false
@@ -22,10 +21,9 @@ struct ContentView: View {
             Image("fighterjet").opacity(0.7)
             
             VStack {
-                Text("Debug Text Loader \(UserDefaults(suiteName:"com.devdude.afterburner.userData")!.string(forKey: "OPENAIKEY")!)")
+                Text("Debug Text Loader \(DataManager().readValue("OPENAIKEY") ?? "NO API KEY")")
                 Text("Thanks for Downloading.").bold().font(.title).padding([.leading, .bottom, .trailing])
                 Text("Editor -> Afterburner For Xcode -> Activate Afterburner")
-//                Link("Add Your OpenAI API Key", destination: URL(string: "https://thedevdude.notion.site/Adding-Your-OpenAI-API-Key-8e1149e6bc754781bd207d6a0142c378")!)
                 
                 Divider()
                 Label("Settings", systemImage: "gear")
@@ -37,10 +35,7 @@ struct ContentView: View {
                 }
                 
                 Button("Update Settings") {
-//                    UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set(apiKeyLocal, forKey: "OPENAIKEY")
-//                    UserDefaults(suiteName: "com.devdude.afterburner.userData")!.set(maxTokenCountLocal, forKey: "MAXTOKENS")
-                    
-                    DataManager().writeValue(apiKeyLocal, key: "OPENAIKEY")
+                    DataManager().writeValue(apiKeyLocal.filter { !$0.isWhitespace }, key: "OPENAIKEY")
                     DataManager().writeValue(String(maxTokenCountLocal), key: "MAXTOKENS")
                     
                     print("updated")

@@ -29,6 +29,7 @@
 		5986C8F329B8C78B00AD8829 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E929B8C74A00AD8829 /* DataManager.swift */; };
 		5986C8F629B8C8DB00AD8829 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 5986C8F529B8C8DB00AD8829 /* Valet */; };
 		5986C8F829B8CA0900AD8829 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 5986C8F729B8CA0900AD8829 /* Valet */; };
+		5986C8FA29B97E2E00AD8829 /* Burner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8F929B97E2E00AD8829 /* Burner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		5986C8E929B8C74A00AD8829 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIConnector_Guts.swift; sourceTree = "<group>"; };
 		5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIResponseHandler.swift; sourceTree = "<group>"; };
+		5986C8F929B97E2E00AD8829 /* Burner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				594D34D429B195550021ED55 /* SourceEditorExtension.swift */,
+				5986C8F929B97E2E00AD8829 /* Burner.swift */,
 				594D34D629B195550021ED55 /* BurnSWIFT.swift */,
 				591C346129B6DC0E00EAA454 /* BurnOBJECTIVEC.swift */,
 				590A9E7C29B19F0F0062A0DF /* AddAPIKeyCommand.swift */,
@@ -309,6 +312,7 @@
 				5986C8F329B8C78B00AD8829 /* DataManager.swift in Sources */,
 				5986C8F129B8C78500AD8829 /* OpenAIConnector_Guts.swift in Sources */,
 				594D34D529B195550021ED55 /* SourceEditorExtension.swift in Sources */,
+				5986C8FA29B97E2E00AD8829 /* Burner.swift in Sources */,
 				5986C8F029B8C78300AD8829 /* OpenAIConnector.swift in Sources */,
 				594D34D729B195550021ED55 /* BurnSWIFT.swift in Sources */,
 				5986C8F229B8C78800AD8829 /* OpenAIResponseHandler.swift in Sources */,

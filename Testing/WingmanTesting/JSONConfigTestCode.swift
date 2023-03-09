@@ -1,4 +1,8 @@
 // Looks like you haven't entered your OpenAI API License Key yet.
+// You can enter it in the Afterburner app.
+// Looks like you haven't entered your OpenAI API License Key yet.
+// You can enter it in the Afterburner app.
+// Looks like you haven't entered your OpenAI API License Key yet.
 // Please follow the guide at
 // https://thedevdude.notion.site/Adding-Your-OpenAI-API-Key-8e1149e6bc754781bd207d6a0142c378
 // to add your API key.
