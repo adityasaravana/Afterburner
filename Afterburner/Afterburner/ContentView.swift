@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    let defaults = UserDefaults(suiteName: "afterburner.settings")
     @State var sheetShowing = false
     @State var apiKeyLocal = ""
     @State var maxTokenCountLocal = 720
@@ -21,7 +22,7 @@ struct ContentView: View {
             Image("fighterjet").opacity(0.7)
             
             VStack {
-                Text("Debug Text Loader \(DataManager().readValue("OPENAIKEY") ?? "NO API KEY")")
+                Text("Debug Text Loader -- APIKEY:\(defaults?.string(forKey: "APIKEY") ?? "no bueno api key") MAXTOKENS:\(defaults?.string(forKey: "MAXTOKENS") ?? "No bueno max tokens")")
                 Text("Thanks for Downloading.").bold().font(.title).padding([.leading, .bottom, .trailing])
                 Text("Editor -> Afterburner For Xcode -> Activate Afterburner")
                 
@@ -35,8 +36,8 @@ struct ContentView: View {
                 }
                 
                 Button("Update Settings") {
-                    DataManager().writeValue(apiKeyLocal.filter { !$0.isWhitespace }, key: "OPENAIKEY")
-                    DataManager().writeValue(String(maxTokenCountLocal), key: "MAXTOKENS")
+                    defaults?.set(apiKeyLocal.filter { !" \n\t\r".contains($0) }, forKey: "APIKEY")
+                    defaults?.set(maxTokenCountLocal, forKey: "MAXTOKENS")
                     
                     print("updated")
                 }
@@ -48,11 +49,13 @@ struct ContentView: View {
             .frame(width: 380)
             .padding()
             .background(
-                .thinMaterial,
+                .ultraThinMaterial,
                 in: RoundedRectangle(cornerRadius: 15, style: .continuous)
             )
             
-        }.fixedSize()
+        }
+        .fixedSize()
+        .frame(width: 500, height: 500)
     }
 }
 

@@ -11,10 +11,9 @@ import AppKit
 
 public struct Burner {
     func burn(language: AfterburnerLanguage, code: NSMutableArray) {
-        let sharedData = DataManager()
-        
+        let connector = OpenAIConnector()
         print("---------------")
-        print(sharedData.readValue("OPENAIKEY"))
+        print(connector.openAIKey)
         
         let lines = code
         
@@ -22,7 +21,7 @@ public struct Burner {
         let orignialLines = lines
         let linesString = lines.componentsJoined(by: "")
         
-        if sharedData.readValue("OPENAIKEY") != "" {
+        if connector.openAIKey != "" {
             let pasteboard = NSPasteboard.general
             pasteboard.clearContents()
             pasteboard.setString(linesString, forType: .string)
@@ -31,9 +30,9 @@ public struct Burner {
             
             switch language {
             case .swift:
-                response = OpenAIConnector().burn_swift(linesString)
+                response = connector.burn_swift(linesString)
             case .objective_c:
-                response = OpenAIConnector().burn_swift(linesString)
+                response = connector.burn_swift(linesString)
             }
             
             var editedLines = [

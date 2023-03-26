@@ -16,25 +16,14 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>Activate Afterburner</string>
 				</dict>
-                
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>$(PRODUCT_MODULE_NAME).BurnOBJECTIVEC</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>$(PRODUCT_BUNDLE_IDENTIFIER).BurnOBJECTIVEC</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Activate Afterburner (Objective-C)</string>
-                </dict>
-                
-<!--				<dict>-->
-<!--					<key>XCSourceEditorCommandClassName</key>-->
-<!--					<string>$(PRODUCT_MODULE_NAME).AddAPIKeyCommand</string>-->
-<!--					<key>XCSourceEditorCommandIdentifier</key>-->
-<!--					<string>$(PRODUCT_BUNDLE_IDENTIFIER).AddAPIKeyCommand</string>-->
-<!--					<key>XCSourceEditorCommandName</key>-->
-<!--					<string>Add OpenAI API Key</string>-->
-<!--				</dict>-->
-                
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).BurnOBJECTIVEC</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).BurnOBJECTIVEC</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Activate Afterburner (Objective-C)</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>

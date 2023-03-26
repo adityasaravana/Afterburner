@@ -13,22 +13,20 @@ public enum AfterburnerLanguage {
 }
 
 public class OpenAIConnector {
+    let defaults = UserDefaults(suiteName: "afterburner.settings")
     let openAIURL = URL(string: "https://api.openai.com/v1/engines/text-davinci-003/completions")
-    var openAIKey = ""
-    
-    // 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
-    
-    init() {
-        if DataManager().readValue("OPENAIKEY") == nil {
-            let manager = DataManager()
-            manager.writeValue("", key: "OPENAIKEY")
-            manager.writeValue("", key: "MAXTOKENS")
-            
-            openAIKey = DataManager().readValue("OPENAIKEY")!
-        }
+    var openAIKey: String {
+        return defaults?.string(forKey: "APIKEY") ?? "invalid"
     }
     
+    #warning("get rid of this before distributing")
+    // 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
+    
     func burn_swift(_ prompt: String) -> Optional<String> {
+        print("-----------------")
+        print("OPENAIKEY:")
+        print(openAIKey)
+        print("----------------")
         return processDavinci(prompt, language: .swift)
     }
     
