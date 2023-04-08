@@ -12,8 +12,6 @@ import AppKit
 public struct Burner {
     func burn(language: AfterburnerLanguage, code: NSMutableArray) {
         let connector = OpenAIConnector()
-        print("---------------")
-        print(connector.openAIKey)
         
         let lines = code
         

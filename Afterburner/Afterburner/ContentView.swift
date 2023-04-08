@@ -54,7 +54,6 @@ struct ContentView: View {
                     dataManager.push(key: .Afterburner_MaxTokensAllowedByUser, content: String(maxTokenCountLocal))
                     
                     update()
-                    print("updated")
                 }
                 
                 Divider()
