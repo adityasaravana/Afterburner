@@ -18,6 +18,10 @@
 		594D34DC29B195550021ED55 /* Afterburner For Xcode.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 594D34CD29B195550021ED55 /* Afterburner For Xcode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		594D34E129B1955A0021ED55 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34D129B195550021ED55 /* XcodeKit.framework */; };
 		594D34E229B1955A0021ED55 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 594D34D129B195550021ED55 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5963413429E1161100B616CB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5963413329E1161100B616CB /* DataManager.swift */; };
+		5963413529E1161100B616CB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5963413329E1161100B616CB /* DataManager.swift */; };
+		5963413829E1E4A100B616CB /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5963413729E1E4A100B616CB /* KeychainSwift */; };
+		5963413A29E1E4C800B616CB /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5963413929E1E4C800B616CB /* KeychainSwift */; };
 		5986C8EB29B8C74B00AD8829 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */; };
 		5986C8ED29B8C74B00AD8829 /* OpenAIConnector_Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */; };
 		5986C8EF29B8C75400AD8829 /* OpenAIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */; };
@@ -77,6 +81,7 @@
 		594D34D629B195550021ED55 /* BurnSWIFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnSWIFT.swift; sourceTree = "<group>"; };
 		594D34D829B195550021ED55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		594D34D929B195550021ED55 /* XcodeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeExtension.entitlements; sourceTree = "<group>"; };
+		5963413329E1161100B616CB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIConnector.swift; sourceTree = "<group>"; };
 		5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIConnector_Guts.swift; sourceTree = "<group>"; };
 		5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIResponseHandler.swift; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5963413829E1E4A100B616CB /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5963413A29E1E4C800B616CB /* KeychainSwift in Frameworks */,
 				594D34D029B195550021ED55 /* Cocoa.framework in Frameworks */,
 				594D34E129B1955A0021ED55 /* XcodeKit.framework in Frameworks */,
 			);
@@ -171,6 +178,7 @@
 				5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */,
 				5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */,
 				5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */,
+				5963413329E1161100B616CB /* DataManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 			);
 			name = Afterburner;
 			packageProductDependencies = (
+				5963413729E1E4A100B616CB /* KeychainSwift */,
 			);
 			productName = Wingman;
 			productReference = 594D34B729B195370021ED55 /* Afterburner.app */;
@@ -214,6 +223,7 @@
 			);
 			name = "Afterburner For Xcode";
 			packageProductDependencies = (
+				5963413929E1E4C800B616CB /* KeychainSwift */,
 			);
 			productName = XcodeExtension;
 			productReference = 594D34CD29B195550021ED55 /* Afterburner For Xcode.appex */;
@@ -247,6 +257,7 @@
 			);
 			mainGroup = 594D34AE29B195370021ED55;
 			packageReferences = (
+				5963413629E1E4A100B616CB /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 594D34B829B195370021ED55 /* Products */;
 			projectDirPath = "";
@@ -283,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5986C8ED29B8C74B00AD8829 /* OpenAIConnector_Guts.swift in Sources */,
+				5963413429E1161100B616CB /* DataManager.swift in Sources */,
 				594D34BD29B195370021ED55 /* ContentView.swift in Sources */,
 				5986C8EF29B8C75400AD8829 /* OpenAIResponseHandler.swift in Sources */,
 				594D34BB29B195370021ED55 /* AfterburnerApp.swift in Sources */,
@@ -295,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5986C8F129B8C78500AD8829 /* OpenAIConnector_Guts.swift in Sources */,
+				5963413529E1161100B616CB /* DataManager.swift in Sources */,
 				594D34D529B195550021ED55 /* SourceEditorExtension.swift in Sources */,
 				5986C8FA29B97E2E00AD8829 /* Burner.swift in Sources */,
 				5986C8F029B8C78300AD8829 /* OpenAIConnector.swift in Sources */,
@@ -579,6 +592,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5963413629E1E4A100B616CB /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5963413729E1E4A100B616CB /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5963413629E1E4A100B616CB /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		5963413929E1E4C800B616CB /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5963413629E1E4A100B616CB /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 594D34AF29B195370021ED55 /* Project object */;
 }

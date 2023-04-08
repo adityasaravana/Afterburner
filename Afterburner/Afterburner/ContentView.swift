@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    let defaults = UserDefaults(suiteName: "afterburner.settings")
+    let dataManager = DataManager()
+    
+    var openAIKeyDisplayer: String {
+        if dataManager.pull(key: .Afterburner_UserOpenAIKey) == "" || dataManager.pull(key: .Afterburner_UserOpenAIKey) == nil {
+            return "Not Added"
+        } else {
+            return dataManager.pull(key: .Afterburner_UserOpenAIKey)!
+        }
+    }
+    
     @State var sheetShowing = false
     @State var apiKeyLocal = ""
     @State var maxTokenCountLocal = 720
+    
+    @State private var updater = UUID()
+    
+    func update() { updater = UUID() }
     
     var maxPossiblePrice: Double {
         return (Double(maxTokenCountLocal) / 1000) * 0.02
@@ -22,13 +35,14 @@ struct ContentView: View {
             Image("fighterjet").opacity(0.7)
             
             VStack {
-                Text("Debug Text Loader -- APIKEY:\(defaults?.string(forKey: "APIKEY") ?? "no bueno api key") MAXTOKENS:\(defaults?.string(forKey: "MAXTOKENS") ?? "No bueno max tokens")")
+                
                 Text("Thanks for Downloading.").bold().font(.title).padding([.leading, .bottom, .trailing])
                 Text("Editor -> Afterburner For Xcode -> Activate Afterburner")
                 
                 Divider()
                 Label("Settings", systemImage: "gear")
                 TextField("Paste your OpenAI API Key Here", text: $apiKeyLocal)
+                Text("OpenAI API Key: \(openAIKeyDisplayer)").bold().font(.caption)
                 HStack {
                     Stepper("Maximum Possible API Charge: $\(maxPossiblePrice)", value: $maxTokenCountLocal, step: 20)
                     Text("(\(maxTokenCountLocal) tokens)").font(.caption2)
@@ -36,9 +50,10 @@ struct ContentView: View {
                 }
                 
                 Button("Update Settings") {
-                    defaults?.set(apiKeyLocal.filter { !" \n\t\r".contains($0) }, forKey: "APIKEY")
-                    defaults?.set(maxTokenCountLocal, forKey: "MAXTOKENS")
+                    dataManager.push(key: .Afterburner_UserOpenAIKey, content: apiKeyLocal)
+                    dataManager.push(key: .Afterburner_MaxTokensAllowedByUser, content: String(maxTokenCountLocal))
                     
+                    update()
                     print("updated")
                 }
                 

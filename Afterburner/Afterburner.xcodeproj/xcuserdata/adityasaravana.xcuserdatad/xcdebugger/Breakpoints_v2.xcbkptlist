@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "350C253C-4A34-4B9D-8421-DF161A9AD502"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XcodeExtension/Burner.swift"
@@ -34,6 +34,38 @@
             endingLineNumber = "16"
             landmarkName = "burn(language:code:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "350C253C-4A34-4B9D-8421-DF161A9AD502 - e527d60e10598893"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Afterburner_For_Xcode.Burner.burn(language: Afterburner_For_Xcode.AfterburnerLanguage, code: __C.NSMutableArray) -&gt; ()"
+                  moduleName = "Afterburner For Xcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adityasaravana/Documents/GitHub/Afterburner/Afterburner/XcodeExtension/Burner.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "380">
+               </Location>
+               <Location
+                  uuid = "350C253C-4A34-4B9D-8421-DF161A9AD502 - e527d60e10598893"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Afterburner_For_Xcode.Burner.burn(language: Afterburner_For_Xcode.AfterburnerLanguage, code: __C.NSMutableArray) -&gt; ()"
+                  moduleName = "Afterburner For Xcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adityasaravana/Documents/GitHub/Afterburner/Afterburner/XcodeExtension/Burner.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "460">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
