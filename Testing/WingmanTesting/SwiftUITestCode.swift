@@ -1,25 +1,15 @@
-//
-//  SwiftUITestCode.swift
-//  WingmanTesting
-//
-//  Created by Aditya Saravana on 3/2/23.
-//
-
+// MODIFIED CODE
 import SwiftUI
-
-// Test code
-// Create a textfield and store the text in an @State variable
 struct ContentView: View {
-    @State var text: String = ""
+    @State private var textFieldString = ""
     var body: some View {
         VStack {
+            // Create a TextField and store the text in an @State variable
+            TextField("Enter your text here", text: $textFieldString)
             Text("Hello, World!")
-            TextField("Enter text", text: $text)
         }
     }
 }
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

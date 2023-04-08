@@ -42,7 +42,7 @@ struct ContentView: View {
                 Divider()
                 Label("Settings", systemImage: "gear")
                 TextField("Paste your OpenAI API Key Here", text: $apiKeyLocal)
-                Text("OpenAI API Key: \(openAIKeyDisplayer)").bold().font(.caption)
+//                Text("OpenAI API Key: \(openAIKeyDisplayer)").bold().font(.caption)
                 HStack {
                     Stepper("Maximum Possible API Charge: $\(maxPossiblePrice)", value: $maxTokenCountLocal, step: 20)
                     Text("(\(maxTokenCountLocal) tokens)").font(.caption2)
@@ -50,10 +50,11 @@ struct ContentView: View {
                 }
                 
                 Button("Update Settings") {
-                    dataManager.push(key: .Afterburner_UserOpenAIKey, content: apiKeyLocal)
+                    dataManager.push(key: .Afterburner_UserOpenAIKey, content: apiKeyLocal.filter { !" \n\t\r".contains($0) })
                     dataManager.push(key: .Afterburner_MaxTokensAllowedByUser, content: String(maxTokenCountLocal))
                     
                     update()
+                    print(updater)
                 }
                 
                 Divider()
