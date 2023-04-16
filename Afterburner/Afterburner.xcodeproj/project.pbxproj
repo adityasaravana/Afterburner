@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		591C346329B6DC0E00EAA454 /* BurnOBJECTIVEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C346129B6DC0E00EAA454 /* BurnOBJECTIVEC.swift */; };
+		593F485429ECBE47002BD40B /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593F485329ECBE47002BD40B /* OpenAIConnector.swift */; };
+		593F485529ECBE47002BD40B /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593F485329ECBE47002BD40B /* OpenAIConnector.swift */; };
 		594D34BB29B195370021ED55 /* AfterburnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34BA29B195370021ED55 /* AfterburnerApp.swift */; };
 		594D34BD29B195370021ED55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D34BC29B195370021ED55 /* ContentView.swift */; };
 		594D34BF29B195380021ED55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594D34BE29B195380021ED55 /* Assets.xcassets */; };
@@ -22,11 +24,7 @@
 		5963413529E1161100B616CB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5963413329E1161100B616CB /* DataManager.swift */; };
 		5963413829E1E4A100B616CB /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5963413729E1E4A100B616CB /* KeychainSwift */; };
 		5963413A29E1E4C800B616CB /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5963413929E1E4C800B616CB /* KeychainSwift */; };
-		5986C8EB29B8C74B00AD8829 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */; };
-		5986C8ED29B8C74B00AD8829 /* OpenAIConnector_Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */; };
 		5986C8EF29B8C75400AD8829 /* OpenAIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */; };
-		5986C8F029B8C78300AD8829 /* OpenAIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */; };
-		5986C8F129B8C78500AD8829 /* OpenAIConnector_Guts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */; };
 		5986C8F229B8C78800AD8829 /* OpenAIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */; };
 		5986C8FA29B97E2E00AD8829 /* Burner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986C8F929B97E2E00AD8829 /* Burner.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		591C346129B6DC0E00EAA454 /* BurnOBJECTIVEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnOBJECTIVEC.swift; sourceTree = "<group>"; };
+		593F485329ECBE47002BD40B /* OpenAIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIConnector.swift; sourceTree = "<group>"; };
 		594D34B729B195370021ED55 /* Afterburner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Afterburner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		594D34BA29B195370021ED55 /* AfterburnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterburnerApp.swift; sourceTree = "<group>"; };
 		594D34BC29B195370021ED55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,8 +81,6 @@
 		594D34D829B195550021ED55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		594D34D929B195550021ED55 /* XcodeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeExtension.entitlements; sourceTree = "<group>"; };
 		5963413329E1161100B616CB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIConnector.swift; sourceTree = "<group>"; };
-		5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIConnector_Guts.swift; sourceTree = "<group>"; };
 		5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIResponseHandler.swift; sourceTree = "<group>"; };
 		5986C8F929B97E2E00AD8829 /* Burner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,8 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				5986C8EE29B8C75400AD8829 /* OpenAIResponseHandler.swift */,
-				5986C8EA29B8C74A00AD8829 /* OpenAIConnector_Guts.swift */,
-				5986C8E829B8C74A00AD8829 /* OpenAIConnector.swift */,
+				593F485329ECBE47002BD40B /* OpenAIConnector.swift */,
 				5963413329E1161100B616CB /* DataManager.swift */,
 			);
 			path = Shared;
@@ -293,12 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5986C8ED29B8C74B00AD8829 /* OpenAIConnector_Guts.swift in Sources */,
 				5963413429E1161100B616CB /* DataManager.swift in Sources */,
 				594D34BD29B195370021ED55 /* ContentView.swift in Sources */,
 				5986C8EF29B8C75400AD8829 /* OpenAIResponseHandler.swift in Sources */,
+				593F485429ECBE47002BD40B /* OpenAIConnector.swift in Sources */,
 				594D34BB29B195370021ED55 /* AfterburnerApp.swift in Sources */,
-				5986C8EB29B8C74B00AD8829 /* OpenAIConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,12 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5986C8F129B8C78500AD8829 /* OpenAIConnector_Guts.swift in Sources */,
 				5963413529E1161100B616CB /* DataManager.swift in Sources */,
 				594D34D529B195550021ED55 /* SourceEditorExtension.swift in Sources */,
 				5986C8FA29B97E2E00AD8829 /* Burner.swift in Sources */,
-				5986C8F029B8C78300AD8829 /* OpenAIConnector.swift in Sources */,
 				594D34D729B195550021ED55 /* BurnSWIFT.swift in Sources */,
+				593F485529ECBE47002BD40B /* OpenAIConnector.swift in Sources */,
 				5986C8F229B8C78800AD8829 /* OpenAIResponseHandler.swift in Sources */,
 				591C346329B6DC0E00EAA454 /* BurnOBJECTIVEC.swift in Sources */,
 			);
@@ -467,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdude.afterburner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdude.afterburner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,7 +522,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdude.afterburner.XcodeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,7 +551,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdude.afterburner.XcodeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";

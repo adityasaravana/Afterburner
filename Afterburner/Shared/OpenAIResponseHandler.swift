@@ -17,7 +17,7 @@ struct OpenAIResponseHandler {
             return product
             
         } catch {
-            print("Error decoding OpenAI API Response")
+            print("Error decoding OpenAI API Response -- \(error)")
         }
         
         return nil
@@ -25,16 +25,22 @@ struct OpenAIResponseHandler {
 }
 
 struct OpenAIResponse: Codable {
-    var id: String
-    var object: String
-    var created: Int
-    var model: String
+    var id: String?
+    var object: String?
+    var created: Int?
     var choices: [Choice]
+    var usage: Usage?
 }
 
 struct Choice: Codable {
-    var text: String
-    var index: Int
-    var logprobs: String?
-    var finish_reason: String
+    var index: Int?
+    var message: [String: String]
+    var finish_reason: String?
+}
+
+
+struct Usage: Codable {
+    var prompt_tokens: Int?
+    var completion_tokens: Int?
+    var total_tokens: Int?
 }

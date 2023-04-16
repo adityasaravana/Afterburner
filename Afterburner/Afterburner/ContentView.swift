@@ -21,13 +21,12 @@ struct ContentView: View {
     @State var sheetShowing = false
     @State var apiKeyLocal = ""
     @State var maxTokenCountLocal = 720
-    
     @State private var updater = UUID()
     
     func update() { updater = UUID() }
     
     var maxPossiblePrice: Double {
-        return (Double(maxTokenCountLocal) / 1000) * 0.02
+        return (Double(maxTokenCountLocal) / 1000) * 0.002
     }
     
     var body: some View {
@@ -68,9 +67,8 @@ struct ContentView: View {
                 in: RoundedRectangle(cornerRadius: 15, style: .continuous)
             )
             
-        }
-        .fixedSize()
-        .frame(width: 500, height: 500)
+        }.frame(height: 500)
+        
     }
 }
 

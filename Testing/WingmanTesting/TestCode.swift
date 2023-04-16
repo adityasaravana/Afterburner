@@ -31,7 +31,6 @@ import Foundation
 //      }
 //   ]
 //}
-
 struct ChatCompletion: Codable {
     let id: String
     let object: String
@@ -39,21 +38,18 @@ struct ChatCompletion: Codable {
     let model: String
     let usage: Usage
     let choices: [Choice]
-    
-    struct Usage: Codable {
-        let promptTokens: Int
-        let completionTokens: Int
-        let totalTokens: Int
-    }
-    
-    struct Choice: Codable {
-        let message: Message
-        let finishReason: String
-        let index: Int
-        
-        struct Message: Codable {
-            let role: String
-            let content: String
-        }
-    }
+}
+struct Usage: Codable {
+    let prompt_tokens: Int
+    let completion_tokens: Int
+    let total_tokens: Int
+}
+struct Choice: Codable {
+    let message: Message
+    let finish_reason: String
+    let index: Int
+}
+struct Message: Codable {
+    let role: String
+    let content: String
 }
