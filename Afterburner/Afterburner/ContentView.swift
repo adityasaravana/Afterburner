@@ -43,7 +43,7 @@ struct ContentView: View {
                 TextField("Paste your OpenAI API Key Here", text: $apiKeyLocal)
 //                Text("OpenAI API Key: \(openAIKeyDisplayer)").bold().font(.caption)
                 HStack {
-                    Stepper("Maximum Possible API Charge: $\(maxPossiblePrice)", value: $maxTokenCountLocal, step: 20)
+                    Stepper("Maximum Possible API Charge: $\(maxPossiblePrice)", value: $maxTokenCountLocal, step: 100)
                     Text("(\(maxTokenCountLocal) tokens)").font(.caption2)
                     
                 }
