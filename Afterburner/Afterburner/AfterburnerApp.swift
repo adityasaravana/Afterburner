@@ -10,10 +10,13 @@ import SwiftUI
 @main
 struct AfterburnerApp: App {
     var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//                .fixedSize()
+//        }.windowResizability(.contentSize)
         WindowGroup {
-            ContentView()
-                .fixedSize()
-        }.windowResizability(.contentSize)
+            OnboardingView(pages: OnboardingPage.allCases)
+        }.windowStyle(.hiddenTitleBar)
     }
 }
 

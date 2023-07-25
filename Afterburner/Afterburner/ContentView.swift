@@ -6,27 +6,28 @@
 //
 
 import SwiftUI
+import Defaults
 
 struct ContentView: View {
+    @Default(.maxTokens) var maxTokens
     let dataManager = DataManager()
     
     var openAIKeyDisplayer: String {
-        if dataManager.pull(key: .Afterburner_UserOpenAIKey) == "" || dataManager.pull(key: .Afterburner_UserOpenAIKey) == nil {
+        if dataManager.pull(key: .openAIKey) == "" || dataManager.pull(key: .openAIKey) == nil {
             return "Not Added"
         } else {
-            return dataManager.pull(key: .Afterburner_UserOpenAIKey)!
+            return dataManager.pull(key: .openAIKey)!
         }
     }
     
     @State var sheetShowing = false
     @State var apiKeyLocal = ""
-    @State var maxTokenCountLocal = 720
     @State private var updater = UUID()
     
     func update() { updater = UUID() }
     
     var maxPossiblePrice: Double {
-        return (Double(maxTokenCountLocal) / 1000) * 0.002
+        return (Double(maxTokens) / 1000) * 0.002
     }
     
     var body: some View {
@@ -43,18 +44,12 @@ struct ContentView: View {
                 TextField("Paste your OpenAI API Key Here", text: $apiKeyLocal)
 //                Text("OpenAI API Key: \(openAIKeyDisplayer)").bold().font(.caption)
                 HStack {
-                    Stepper("Maximum Possible API Charge: $\(maxPossiblePrice)", value: $maxTokenCountLocal, step: 100)
-                    Text("(\(maxTokenCountLocal) tokens)").font(.caption2)
+                    Stepper("Maximum Possible API Charge: $\(maxPossiblePrice)", value: $maxTokens, step: 100)
+                    Text("(\(maxTokens) tokens)").font(.caption2)
                     
                 }
                 
-                Button("Update Settings") {
-                    dataManager.push(key: .Afterburner_UserOpenAIKey, content: apiKeyLocal.filter { !" \n\t\r".contains($0) })
-                    dataManager.push(key: .Afterburner_MaxTokensAllowedByUser, content: String(maxTokenCountLocal))
-                    
-                    update()
-                    print(updater)
-                }
+                
                 
                 Divider()
                 Text("Help is available at aditya.saravana@icloud.com.").font(.caption2)

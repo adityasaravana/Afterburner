@@ -1,33 +1,35 @@
 //
-//  OpenAIConnector.swift
-//  Afterburner
+//  OpenAIValidator.swift
+//  Afterburner 
 //
-//  Created by Aditya Saravana on 4/16/23.
+//  Created by Aditya Saravana on 7/25/23.
 //
 
 import Foundation
 import Combine
 
-public enum AfterburnerLanguage {
-    case swift
-    case objective_c
-}
-
-class OpenAIConnector: ObservableObject {
+class OpenAIValidator {
     let openAIURL = URL(string: "https://api.openai.com/v1/chat/completions")
     let dataManager = DataManager()
-    var openAIKey: String {
-        print("DataManager returned nil for OPENAIKEY")
-        return self.dataManager.pull(key: .openAIKey) ?? "DataManager returned nil for OPENAIKEY"
+    var openAIKey: String
+    
+    init(openAIKey: String) {
+        self.openAIKey = openAIKey
+        
+        logMessage("VALIDATION MSG", messageUserType: .user)
     }
     
-    @Published var messageLog: [[String: String]] = [
-        ["role": "system", "content": "You're Afterburner, an Xcode Extension that makes coding apps easier. Respond only in code, but make sure to add comments detailing what each part does."]
+    var messageLog: [[String: String]] = [
+        ["role": "system", "content": "You're a validation service for the OpenAI API. If the validation message below reaches you, respond in a friendly manner."]
     ]
     
-    func sendToAssistant() {
-        /// DON'T TOUCH THIS
+    func validate(onboarding: Bool = false) -> String {
         var request = URLRequest(url: self.openAIURL!)
+        var errorMessage = "There was an issue validating your OpenAI API key."
+        if !onboarding {
+            errorMessage += " Try validating again and using the Xcode extension."
+        }
+        errorMessage += " If that doesn't work, email aditya.saravana@icloud.com for help."
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Bearer \(self.openAIKey)", forHTTPHeaderField: "Authorization")
@@ -38,15 +40,12 @@ class OpenAIConnector: ObservableObject {
             "messages" : messageLog
         ]
         
-        /// DON'T TOUCH THIS
         var httpBodyJson: Data? = nil
         
         do {
-            //            httpBodyJson = try JSONEncoder().encode(httpBody)
             httpBodyJson = try JSONSerialization.data(withJSONObject: httpBody, options: .prettyPrinted)
         } catch {
-            print("Unable to convert to JSON \(error)")
-            logMessage("error", messageUserType: .assistant)
+            return "⚠️ \(errorMessage) | DEBUG DESCRIPTION: Error converting to JSON: \(error). Caught at OpenAIValidator.validate. ⚠️"
         }
         
         request.httpBody = httpBodyJson
@@ -55,39 +54,15 @@ class OpenAIConnector: ObservableObject {
             let jsonStr = String(data: requestData, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             print(jsonStr)
             let responseHandler = OpenAIResponseHandler()
-            logMessage((responseHandler.decodeJson(jsonString: jsonStr)?.choices[0].message["content"])!, messageUserType: .assistant)
+            return (responseHandler.decodeJson(jsonString: jsonStr)?.choices[0].message["content"])!
+        } else {
+            return "⚠️ \(errorMessage) | DEBUG DESCRIPTION: OpenAIValidator.validate.requestData was nil. ⚠️"
         }
-        
-        
-    }
-    
-    
-    func burn_swift(_ prompt: String) -> Optional<String> {
-        self.logMessage(
-"""
-// Swift 5
-
-"""     + prompt, messageUserType: .user)
-        self.sendToAssistant()
-        return messageLog[2]["content"]
-    }
-    
-    func burn_objectiveC(_ prompt: String) -> Optional<String> {
-        self.logMessage(
-"""
-// Objective-C
-
-"""     + prompt, messageUserType: .user)
-        self.sendToAssistant()
-        return messageLog[2]["content"]
     }
 }
 
-extension Dictionary: Identifiable { public var id: UUID { UUID() } }
-extension Array: Identifiable { public var id: UUID { UUID() } }
-extension String: Identifiable { public var id: UUID { UUID() } }
 
-extension OpenAIConnector {
+extension OpenAIValidator {
     private func executeRequest(request: URLRequest, withSessionConfig sessionConfig: URLSessionConfiguration?) -> Data? {
         let semaphore = DispatchSemaphore(value: 0)
         let session: URLSession
@@ -118,7 +93,7 @@ extension OpenAIConnector {
     }
 }
 
-extension OpenAIConnector {
+extension OpenAIValidator {
     /// This function makes it simpler to append items to messageLog.
     func logMessage(_ message: String, messageUserType: MessageUserType) {
         var messageUserTypeString = ""

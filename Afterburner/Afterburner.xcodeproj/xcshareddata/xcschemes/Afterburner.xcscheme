@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "594D34B629B195370021ED55"
-               BuildableName = "Afterburner.app"
-               BlueprintName = "Afterburner"
+               BuildableName = "Afterburner .app"
+               BlueprintName = "Afterburner "
                ReferencedContainer = "container:Afterburner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "594D34B629B195370021ED55"
-            BuildableName = "Afterburner.app"
-            BlueprintName = "Afterburner"
+            BuildableName = "Afterburner .app"
+            BlueprintName = "Afterburner "
             ReferencedContainer = "container:Afterburner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "594D34B629B195370021ED55"
-            BuildableName = "Afterburner.app"
-            BlueprintName = "Afterburner"
+            BuildableName = "Afterburner .app"
+            BlueprintName = "Afterburner "
             ReferencedContainer = "container:Afterburner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

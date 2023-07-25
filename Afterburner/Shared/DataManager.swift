@@ -19,8 +19,13 @@ public struct DataManager {
         return keychain.get(key.rawValue)
     }
     
-    public enum Keys: String {
-        case Afterburner_MaxTokensAllowedByUser
-        case Afterburner_UserOpenAIKey
+    public enum Keys {
+        case openAIKey
+        
+        var rawValue: String {
+            switch self {
+            case .openAIKey: return "Afterburner User API Key"
+            }
+        }
     }
 }
