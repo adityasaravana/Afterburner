@@ -25,7 +25,7 @@ enum OnboardingPage: CaseIterable {
         case .keyboardShortcuts:
             return .Skip
         case .openAIKey:
-            return .Next
+            return .Done
         }
     }
     

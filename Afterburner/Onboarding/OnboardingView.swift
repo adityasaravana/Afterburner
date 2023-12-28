@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Defaults
 
 struct OnboardingView: View {
     @State private var currentPage: OnboardingPage = .welcome
@@ -21,14 +22,12 @@ struct OnboardingView: View {
         switch page {
         case .welcome:
             WelcomePage(disableNextButton: $disableNextButton)
-        case .xcodeExtension:
-            XcodeExtensionPage(disableNextButton: $disableNextButton)
         case .openAIKey:
             OpenAIKeyPage(disableNextButton: $disableNextButton)
-            //         case .keyboardShortcuts:
-            //             KeyboardShortcutPage()
-        default:
-            Text("No onboarding page for this step yet.")
+        case .keyboardShortcuts:
+            KeyboardShortcutsPage()
+        case .xcodeExtension:
+            XcodeExtensionPage(disableNextButton: $disableNextButton)
         }
     }
     
@@ -61,22 +60,45 @@ struct OnboardingView: View {
                         .padding()
                     }
                     Spacer()
-                    Button(action: showNextPage, label: {
+                    Button {
+                        switch currentPage.buttonType {
+                        case .Next:
+                            showNextPage()
+                        case .Skip:
+                            showNextPage()
+                        case .Done:
+                            Defaults[.onboard] = false
+                            withAnimation {
+                                NSApp.windows.first?.close()
+                            }
+                        }
+                    } label: {
                         var color: Color {
                             if disableNextButton {
-                                return .primary
+                                return .gray
                             } else {
                                 return .accentColor
                             }
                         }
                         
-                        Text("Next")
+                        var text: String {
+                            switch currentPage.buttonType {
+                            case .Next:
+                                return "Next"
+                            case .Skip:
+                                return "Skip/Next"
+                            case .Done:
+                                return "Done"
+                            }
+                        }
+                        
+                        Text(text)
                             .foregroundColor(.white)
                             .bold()
                             .padding(.horizontal, 30)
                             .padding(.vertical, 5)
                             .background(color.cornerRadius(25))
-                    })
+                    }
                     .disabled(disableNextButton)
                     .keyboardShortcut(.defaultAction)
                     .buttonStyle(.borderless)
@@ -102,7 +124,6 @@ struct OnboardingView: View {
         currentPage = pages[currentIndex - 1]
     }
 }
-
 
 struct preview: PreviewProvider {
     static var previews: some View {

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct OpenAIKeyPage: View {
-    
+    @State var showResponseArea = false
+    @State var loading = false
     @State var APIKeyLocal = ""
     @State var secureField = true
     @State var response = ""
@@ -49,25 +50,44 @@ struct OpenAIKeyPage: View {
                         .textFieldStyle(.roundedBorder)
                 }
                 
-                
-                
                 Button("Save") {
+                    response = ""
+                    showResponseArea = true
+                    loading = true
+                    
+                    let validator = OpenAIConnector()
+                    validator.logMessage("You are validator, a system that lets users check if their OpenAI API key is valid before entering the app. Once you get this message, respond with a dad joke. DO NOT respond with ANYTHING but the dad joke, as it'll mess up the app's UI.", messageUserType: .user)
+                    
+                    keychainManager.push(key: DataManager.Keys.openAIKey, content: APIKeyLocal.filter { !" \n\t\r".contains($0) })
                     
                     APIKeyLocal = ""
-                    response = "Loading..."
+                    
                     Task {
-                        let validator = OpenAIValidator(openAIKey: APIKeyLocal)
-                        response = validator.validate(onboarding: true)
-                        keychainManager.push(key: .openAIKey, content: APIKeyLocal.filter { !" \n\t\r".contains($0) })
+                       
+                        validator.sendToAssistant()
+                        response = validator.messageLog.last?["content"] ?? "Looks like nothing came back from OpenAI."
                         disableNextButton = false
+                        loading = false
                     }
-                }
+                }.disabled(loading)
             }.padding(.horizontal, 40)
-            Text("OpenAI Response: \(response)")
-                .bold()
-                .font(.title3)
-                .padding(.top, 30)
-            Text("If the response looks good, click next.")
+            
+            if showResponseArea {
+                Text("Your AI-generated dad joke:").padding(.top, 30)
+                if !loading {
+                    Text("\(response)")
+                        .multilineTextAlignment(.center)
+                        .bold()
+                        .font(.title3)
+                } else {
+                    ProgressView().progressViewStyle(.circular)
+                }
+                
+                Text("If the response looks good, click done. You're all set!").padding(.top, 30)
+            }
+            
+            
+            
         }
         .modifier(OnboardingViewPage())
         .onAppear {
@@ -79,6 +99,6 @@ struct OpenAIKeyPage: View {
 
 struct OpenAIKeyPage_Previews: PreviewProvider {
     static var previews: some View {
-        OpenAIKeyPage(disableNextButton: .constant(true))
+        OpenAIKeyPage(showResponseArea: true, response: "response here", disableNextButton: .constant(true))
     }
 }

@@ -57,8 +57,6 @@ class OpenAIConnector: ObservableObject {
             let responseHandler = OpenAIResponseHandler()
             logMessage((responseHandler.decodeJson(jsonString: jsonStr)?.choices[0].message["content"])!, messageUserType: .assistant)
         }
-        
-        
     }
     
     
